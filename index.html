@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="fil"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BatsCityAccess</title>
+<meta name="theme-color" content="#0b5ed7">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>:root{
+  --bg:#f1f5fb;--card:#fff;--ink:#0f1b2d;--muted:#5a6b80;--line:#e0e7f0;
+  --brand:#0a4f9e;--brand-d:#073a77;--brand2:#e6f0fc;--accent:#f59e0b;
+  --danger:#d92d20;--danger2:#fdecea;--ok:#12805c;
+  --shadow:0 1px 2px rgba(15,27,45,.06),0 6px 18px rgba(15,27,45,.06);
+  --r:18px;--fs:16px;
+}
+:root[data-theme=dark]{
+  --bg:#0a1220;--card:#121e33;--ink:#e8eef7;--muted:#9db0c7;--line:#223350;
+  --brand:#6cb2ff;--brand-d:#0d2a4d;--brand2:#16304f;--danger:#ff7a6b;--danger2:#3a1b1b;--ok:#3ccf9c;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme=light]):not([data-theme=dark]){
+    --bg:#0a1220;--card:#121e33;--ink:#e8eef7;--muted:#9db0c7;--line:#223350;
+    --brand:#6cb2ff;--brand-d:#0d2a4d;--brand2:#16304f;--danger:#ff7a6b;--danger2:#3a1b1b;--ok:#3ccf9c;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:var(--fs)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.45;min-height:100vh}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:var(--brand)}
+.app{max-width:560px;margin:0 auto;min-height:100vh;position:relative;padding-bottom:84px}
+svg.i{width:1.35em;height:1.35em;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* header */
+.top{background:linear-gradient(160deg,var(--brand-d),var(--brand) 140%);color:#fff;padding:14px 16px 56px;border-radius:0 0 28px 28px}
+:root[data-theme=dark] .top{background:linear-gradient(160deg,#0a2140,#12427a)}
+.bar{display:flex;align-items:center;gap:10px}
+.logo{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.18);display:grid;place-items:center}
+.bar h1{font-size:1.1rem;margin:0;line-height:1.15}
+.bar small{display:block;opacity:.85;font-size:.72rem;font-weight:400}
+.sp{flex:1}
+.pill{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;background:rgba(255,255,255,.16);color:#fff;padding:7px 11px;font-size:.78rem}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80}
+.off .dot{background:#fbbf24}
+.hello{margin:16px 2px 0;font-size:1.35rem;font-weight:700}
+.hello small{display:block;font-size:.85rem;font-weight:400;opacity:.88}
+.offbanner{margin:12px 16px 0;padding:10px 12px;border-radius:12px;background:#fff4d6;color:#6b4a00;font-size:.85rem;display:none}
+.offline .offbanner{display:block}
+
+/* search */
+.sbox{margin:-30px 16px 0;position:relative;z-index:2;background:var(--card);border-radius:16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:8px;padding:0 14px}
+.sbox input{flex:1;border:0;background:transparent;color:var(--ink);font:inherit;padding:15px 0;outline:none;min-width:0}
+.sbox svg{color:var(--muted)}
+
+main{padding:16px 16px 0}
+h2.sec{font-size:1.02rem;margin:22px 2px 10px;display:flex;align-items:center;gap:8px}
+h2.sec a,h2.sec button{margin-left:auto;font-size:.82rem;font-weight:500;background:none;border:0;color:var(--brand);padding:0}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden}
+
+/* weather mini */
+.wmini{display:flex;align-items:center;gap:14px;padding:14px 16px;border:0;width:100%;text-align:left;background:var(--card);border-radius:var(--r);box-shadow:var(--shadow)}
+.wmini .big{font-size:2rem;font-weight:700;line-height:1}
+.wmini .sub{color:var(--muted);font-size:.85rem}
+.wmini svg.i{width:2.6rem;height:2.6rem;color:var(--accent)}
+
+/* emergency strip */
+.sos{background:linear-gradient(135deg,#b42318,#e5484d);color:#fff;border-radius:var(--r);padding:14px;box-shadow:var(--shadow)}
+.sos h3{margin:0 0 10px;font-size:1rem;display:flex;gap:8px;align-items:center}
+.hs{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin:0 -2px;padding:2px}
+.hs::-webkit-scrollbar{display:none}
+.call{flex:none;display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,.18);color:#fff;text-decoration:none;border-radius:14px;padding:10px 13px;min-width:130px}
+.call b{font-size:1rem}.call span{font-size:.72rem;opacity:.9}
+
+/* tiles */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tile{display:flex;flex-direction:column;align-items:center;gap:7px;border:0;background:none;padding:2px 0;color:var(--ink);font-size:.72rem;text-align:center;line-height:1.2}
+.tile i{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 14%,var(--card));color:var(--c);box-shadow:var(--shadow)}
+.tile svg.i{width:26px;height:26px}
+
+/* announcements carousel */
+.news{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:2px 16px 10px;scrollbar-width:none}
+.news::-webkit-scrollbar{display:none}
+.nc{scroll-snap-align:start;flex:none;width:82%;max-width:300px;background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:14px;display:flex;flex-direction:column;gap:6px}
+.nc h4{margin:0;font-size:.95rem;line-height:1.3}
+.nc p{margin:0;font-size:.82rem;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--brand2);color:var(--brand);align-self:flex-start}
+.tag.advisory{background:var(--danger2);color:var(--danger)}
+.tag.event{background:#fff1d6;color:#9a5b00}
+:root[data-theme=dark] .tag.event{background:#3a2c0e;color:#f5b84a}
+.date{font-size:.74rem;color:var(--muted)}
+.nlink{font-size:.82rem;margin-top:auto}
+
+/* chips */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 16px 4px;scrollbar-width:none;position:sticky;top:0;background:var(--bg);z-index:3}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;font-size:.85rem;display:flex;gap:6px;align-items:center}
+.chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:#fff}
+:root[data-theme=dark] .chip[aria-pressed=true]{color:#06182e}
+.count{font-size:.8rem;color:var(--muted);margin:10px 4px}
+
+/* item card */
+.it{border-left:5px solid var(--c)}
+.it .hd{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;border:0;background:none;padding:14px 14px 10px}
+.it .ico{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 14%,var(--card));color:var(--c);flex:none}
+.it h4{margin:0;font-size:.98rem;line-height:1.3}
+.it .s{margin:3px 0 0;font-size:.85rem;color:var(--muted)}
+.it .chev{margin-left:auto;color:var(--muted);transition:transform .2s;flex:none;margin-top:6px}
+.it.open .chev{transform:rotate(180deg)}
+.acts{display:flex;gap:8px;flex-wrap:wrap;padding:0 14px 14px}
+.btn{display:inline-flex;align-items:center;gap:7px;border:0;border-radius:12px;padding:9px 13px;font-size:.85rem;font-weight:600;text-decoration:none;background:var(--brand2);color:var(--brand)}
+.btn.p{background:var(--brand);color:#fff}
+:root[data-theme=dark] .btn.p{color:#06182e}
+.btn.d{background:var(--danger);color:#fff}
+:root[data-theme=dark] .btn.d{color:#2a0a07}
+.btn.on{background:var(--accent);color:#2b1a00}
+.det{display:none;padding:0 14px 14px;font-size:.9rem;border-top:1px dashed var(--line)}
+.it.open .det{display:block}
+.det h5{margin:14px 0 4px;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.det ul{margin:0;padding-left:18px}.det li{margin:3px 0}
+.srcl{margin-top:12px;font-size:.74rem;color:var(--muted)}
+
+/* weather view */
+.wnow{background:linear-gradient(150deg,#1d6fd1,#0a4f9e);color:#fff;border-radius:24px;padding:20px;box-shadow:var(--shadow)}
+:root[data-theme=dark] .wnow{background:linear-gradient(150deg,#12427a,#0a2140)}
+.wnow .row{display:flex;align-items:center;gap:14px}
+.wnow .t{font-size:3.4rem;font-weight:700;line-height:1}
+.wnow svg.i{width:4rem;height:4rem;color:#ffd666}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.stats div{background:rgba(255,255,255,.14);border-radius:12px;padding:8px;text-align:center;font-size:.78rem}
+.stats b{display:block;font-size:.98rem}
+.fc{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.fc div{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:10px 4px;text-align:center;font-size:.75rem}
+.fc svg.i{width:1.7rem;height:1.7rem;color:var(--accent);display:block;margin:4px auto}
+.fc b{font-size:.85rem}
+.tip{margin-top:12px;padding:10px 12px;border-radius:12px;background:var(--brand2);color:var(--brand);font-size:.85rem}
+.note{font-size:.8rem;color:var(--muted);margin:8px 2px}
+
+/* lists in menu */
+.row{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);width:100%;border-left:0;border-right:0;border-top:0;background:none;text-align:left}
+.row:last-child{border-bottom:0}
+.row .sp{flex:1}
+.seg{display:flex;background:var(--bg);border-radius:12px;padding:3px;gap:3px}
+.seg button{border:0;background:none;padding:7px 11px;border-radius:9px;font-size:.82rem}
+.seg button[aria-pressed=true]{background:var(--card);box-shadow:var(--shadow);font-weight:700}
+.radio{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center}
+[aria-checked=true] .radio{border-color:var(--brand)}
+[aria-checked=true] .radio::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--brand)}
+
+/* sheet + toast */
+.sheet{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:flex-end;justify-content:center;z-index:30}
+.sheet.show{display:flex}
+.sheet .box{background:var(--card);width:100%;max-width:560px;border-radius:24px 24px 0 0;padding:8px 0 24px}
+.sheet h3{margin:12px 20px 6px}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:#14202e;color:#fff;padding:10px 16px;border-radius:12px;font-size:.88rem;opacity:0;pointer-events:none;transition:.25s;z-index:40;max-width:90vw;text-align:center}
+.toast.show{opacity:1}
+
+/* tab bar */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:center;pointer-events:none}
+.tabs nav{pointer-events:auto;width:100%;max-width:560px;background:var(--card);border-top:1px solid var(--line);display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -6px 20px rgba(15,27,45,.08)}
+.tabs button{flex:1;border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:.66rem;color:var(--muted);padding:6px 2px;border-radius:12px}
+.tabs button svg.i{width:23px;height:23px}
+.tabs button[aria-current=page]{color:var(--brand)}
+.tabs button.sosb{color:var(--danger)}
+.tabs button.sosb svg{background:var(--danger);color:#fff;border-radius:50%;padding:6px;width:36px;height:36px;margin-top:-16px;box-shadow:0 4px 12px rgba(217,45,32,.45)}
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+.foot{font-size:.74rem;color:var(--muted);padding:6px 4px 20px}
+</style></head><body>
+<div id="root"></div><div id="sheet" class="sheet"></div><div id="toast" class="toast" role="status"></div>
+<script>const LANGS = [
+  { code: 'fil', name: 'Filipino' },
+  { code: 'en', name: 'English' },
+  { code: 'ceb', name: 'Cebuano (Bisaya)' },
+  { code: 'ilo', name: 'Ilokano' },
+  { code: 'hil', name: 'Hiligaynon' }
+];
+const I18N = {
+en: {
+  tagline: 'Your city guide, online or offline', home: 'Home', info: 'Information', sos: 'Emergency', wx: 'Weather & Map', menu: 'Menu',
+  gm: 'Good morning', ga: 'Good afternoon', ge: 'Good evening', search: 'Search services, jobs, hotlines…',
+  online: 'Online', offline: 'Offline mode', offnote: 'No internet. Showing saved information.', upd: 'Updated', ready: 'Ready offline',
+  news: 'Announcements', all: 'All', seeall: 'See all', quick: 'Quick access', help: 'Need help now?', imp: 'Important hotlines',
+  call: 'Call', dir: 'Directions', link: 'Open website', save: 'Save', saved: 'Saved', share: 'Share', copied: 'Link copied',
+  office: 'Office', contact: 'Contact', hours: 'Office hours', req: 'Requirements', notes: 'Details', fees: 'Fees', src: 'Source',
+  none: 'No results', res: 'results', hint: 'Tap a number to call. Calls need mobile signal.', tips: 'Safety tips',
+  w: 'Weather', now: 'Now', feels: 'Feels like', hum: 'Humidity', wind: 'Wind', rain: 'Chance of rain', fc: '5-day forecast',
+  useloc: 'Use my location', locating: 'Finding your location…', locno: 'Location is off or blocked. Showing Batangas City.',
+  wcache: 'Last saved forecast', wfail: 'Weather needs internet the first time.', raintip: 'High chance of rain. Bring an umbrella.',
+  mapt: 'Maps and directions', mapn: 'Opens your maps app. Needs internet.', myloc: 'Open my location in Maps', places: 'Places', openmaps: 'Open in Maps',
+  lang: 'Language', theme: 'Appearance', auto: 'Auto', light: 'Light', dark: 'Dark', size: 'Text size', mysaved: 'Saved items', nosaved: 'Nothing saved yet. Tap the bookmark on any card.',
+  about: 'About', install: 'Install app', chk: 'Check for updates', uptodate: 'Already up to date', done: 'Information updated', fail: 'Could not reach the server',
+  langnote: 'Menus are translated. Information is shown in Filipino or English.',
+  abouttxt: 'Student project, not an official government app. Information comes from official city pages and may change. Confirm with the office.',
+  t_news: 'News', t_advisory: 'Advisory', t_event: 'Event', t_reminder: 'Reminder',
+  wc0: 'Clear', wc1: 'Partly cloudy', wc2: 'Cloudy', wc3: 'Fog', wc4: 'Light rain', wc5: 'Rain', wc6: 'Rain showers', wc7: 'Thunderstorm',
+  c_emergency: 'Emergency', c_services: 'Services', c_jobs: 'Jobs', c_fares: 'Fares & Transport', c_health: 'Health Care', c_programs: 'Programs', c_policies: 'Policies & Rights', c_offices: 'Government Offices'
+},
+fil: {
+  tagline: 'Gabay ng lungsod mo, online man o offline', home: 'Home', info: 'Impormasyon', sos: 'Emerhensiya', wx: 'Panahon at Mapa', menu: 'Menu',
+  gm: 'Magandang umaga', ga: 'Magandang hapon', ge: 'Magandang gabi', search: 'Maghanap ng serbisyo, trabaho, hotline…',
+  online: 'Online', offline: 'Offline mode', offnote: 'Walang internet. Ipinapakita ang naka-save na impormasyon.', upd: 'Na-update', ready: 'Handa kahit offline',
+  news: 'Mga Anunsyo', all: 'Lahat', seeall: 'Lahat', quick: 'Mabilisang access', help: 'Kailangan ng tulong ngayon?', imp: 'Mahahalagang hotline',
+  call: 'Tumawag', dir: 'Direksyon', link: 'Buksan ang website', save: 'I-save', saved: 'Naka-save', share: 'Ibahagi', copied: 'Nakopya ang link',
+  office: 'Tanggapan', contact: 'Kontak', hours: 'Oras ng opisina', req: 'Mga requirement', notes: 'Mga detalye', fees: 'Bayad', src: 'Pinagmulan',
+  none: 'Walang nakita', res: 'resulta', hint: 'Pindutin ang numero para tumawag. Kailangan ng signal ang tawag.', tips: 'Paalala sa kaligtasan',
+  w: 'Panahon', now: 'Ngayon', feels: 'Pakiramdam', hum: 'Halumigmig', wind: 'Hangin', rain: 'Tsansa ng ulan', fc: 'Forecast sa susunod na 5 araw',
+  useloc: 'Gamitin ang aking lokasyon', locating: 'Hinahanap ang iyong lokasyon…', locno: 'Naka-off o hinaharang ang lokasyon. Ipinapakita ang Batangas City.',
+  wcache: 'Huling na-save na forecast', wfail: 'Kailangan ng internet ang panahon sa unang beses.', raintip: 'Malaki ang tsansa ng ulan. Magdala ng payong.',
+  mapt: 'Mapa at direksyon', mapn: 'Bubuksan ang maps app. Kailangan ng internet.', myloc: 'Buksan ang aking lokasyon sa Maps', places: 'Mga lugar', openmaps: 'Buksan sa Maps',
+  lang: 'Wika', theme: 'Itsura', auto: 'Auto', light: 'Maliwanag', dark: 'Madilim', size: 'Laki ng teksto', mysaved: 'Mga naka-save', nosaved: 'Wala pang naka-save. Pindutin ang bookmark sa anumang card.',
+  about: 'Tungkol sa app', install: 'I-install ang app', chk: 'Tingnan ang update', uptodate: 'Napapanahon na', done: 'Na-update ang impormasyon', fail: 'Hindi makontak ang server',
+  langnote: 'Isinalin ang menu. Filipino o English ang ipinapakita sa impormasyon.',
+  abouttxt: 'Proyekto ng estudyante, hindi opisyal na app ng gobyerno. Mula sa opisyal na pahina ng lungsod ang impormasyon at maaaring magbago. Kumpirmahin sa opisina.',
+  t_news: 'Balita', t_advisory: 'Abiso', t_event: 'Kaganapan', t_reminder: 'Paalala',
+  wc0: 'Maaliwalas', wc1: 'Bahagyang maulap', wc2: 'Maulap', wc3: 'Hamog', wc4: 'Ambon', wc5: 'Ulan', wc6: 'Pag-ulan', wc7: 'Pagkulog at pagkidlat',
+  c_emergency: 'Emerhensiya', c_services: 'Serbisyo', c_jobs: 'Trabaho', c_fares: 'Pamasahe', c_health: 'Kalusugan', c_programs: 'Programa', c_policies: 'Patakaran at Karapatan', c_offices: 'Mga Tanggapan ng Pamahalaan'
+},
+ceb: {
+  tagline: 'Imong giya sa siyudad, online o offline', home: 'Home', info: 'Impormasyon', sos: 'Emerhensya', wx: 'Panahon ug Mapa', menu: 'Menu',
+  gm: 'Maayong buntag', ga: 'Maayong hapon', ge: 'Maayong gabii', search: 'Pangita og serbisyo, trabaho, hotline…',
+  online: 'Online', offline: 'Offline mode', offnote: 'Walay internet. Gipakita ang gi-save nga impormasyon.', upd: 'Gi-update', ready: 'Andam bisan offline',
+  news: 'Mga Pahibalo', all: 'Tanan', seeall: 'Tan-awa tanan', quick: 'Dali nga access', help: 'Kinahanglan ug tabang karon?', imp: 'Importanteng hotline',
+  call: 'Tawag', dir: 'Direksyon', link: 'Ablihi ang website', save: 'I-save', saved: 'Naka-save', share: 'Ipaambit', copied: 'Na-kopya ang link',
+  office: 'Opisina', contact: 'Kontak', hours: 'Oras sa opisina', req: 'Mga kinahanglanon', notes: 'Mga detalye', fees: 'Bayranan', src: 'Tinubdan',
+  none: 'Walay nakit-an', res: 'resulta', hint: 'I-tap ang numero aron motawag. Kinahanglan ang signal sa tawag.', tips: 'Mga tambag sa kaluwasan',
+  w: 'Panahon', now: 'Karon', feels: 'Pagbati', hum: 'Kaumog', wind: 'Hangin', rain: 'Posibilidad sa ulan', fc: 'Forecast sa sunod nga 5 ka adlaw',
+  useloc: 'Gamita ang akong lokasyon', locating: 'Gipangita ang imong lokasyon…', locno: 'Naka-off o gibabagan ang lokasyon. Gipakita ang Batangas City.',
+  wcache: 'Pinakaulahing na-save nga forecast', wfail: 'Kinahanglan ang internet sa panahon sa unang higayon.', raintip: 'Dako ang posibilidad sa ulan. Pagdala og payong.',
+  mapt: 'Mapa ug direksyon', mapn: 'Moabli ang maps app. Kinahanglan ang internet.', myloc: 'Ablihi ang akong lokasyon sa Maps', places: 'Mga lugar', openmaps: 'Ablihi sa Maps',
+  lang: 'Pinulongan', theme: 'Dagway', auto: 'Auto', light: 'Hayag', dark: 'Madulom', size: 'Gidak-on sa teksto', mysaved: 'Mga naka-save', nosaved: 'Wala pay naka-save. I-tap ang bookmark sa bisan unsang card.',
+  about: 'Mahitungod sa app', install: 'I-install ang app', chk: 'Susiha ang update', uptodate: 'Updated na', done: 'Na-update ang impormasyon', fail: 'Wala maabot ang server',
+  langnote: 'Gihubad ang menu. Filipino o English ang gipakita sa impormasyon.',
+  abouttxt: 'Proyekto sa estudyante, dili opisyal nga app sa gobyerno. Gikan sa opisyal nga panid sa siyudad ang impormasyon ug mahimong mausab. Kumpirmaha sa opisina.',
+  t_news: 'Balita', t_advisory: 'Pahibalo', t_event: 'Kalihokan', t_reminder: 'Pahinumdom',
+  wc0: 'Klaro', wc1: 'Adunay panganod', wc2: 'Mapanganod', wc3: 'Gabon', wc4: 'Hinay nga ulan', wc5: 'Ulan', wc6: 'Pagpangulan', wc7: 'Dalogdog ug kilat',
+  c_emergency: 'Emerhensya', c_services: 'Serbisyo', c_jobs: 'Trabaho', c_fares: 'Plete ug Transportasyon', c_health: 'Panglawas', c_programs: 'Programa', c_policies: 'Palisiya ug Katungod', c_offices: 'Mga Opisina sa Gobyerno'
+},
+ilo: {
+  tagline: 'Ti giyam iti siudad, online wenno offline', home: 'Home', info: 'Impormasion', sos: 'Emerhensia', wx: 'Panawen ken Mapa', menu: 'Menu',
+  gm: 'Naimbag a bigat', ga: 'Naimbag a malem', ge: 'Naimbag a rabii', search: 'Agsapul iti serbisio, trabaho, hotline…',
+  online: 'Online', offline: 'Offline mode', offnote: 'Awan ti internet. Naipakita dagiti naisave nga impormasion.', upd: 'Naupdate', ready: 'Nakasagana uray offline',
+  news: 'Dagiti Ipakaammo', all: 'Amin', seeall: 'Kitaen amin', quick: 'Napardas nga access', help: 'Masapul ti tulong ita?', imp: 'Napateg a hotline',
+  call: 'Tawagan', dir: 'Direksion', link: 'Lukatan ti website', save: 'I-save', saved: 'Naisave', share: 'Share', copied: 'Nakopya ti link',
+  office: 'Opisina', contact: 'Kontak', hours: 'Oras ti opisina', req: 'Dagiti masapul', notes: 'Dagiti detalye', fees: 'Bayadan', src: 'Gubuayan',
+  none: 'Awan ti nabirokan', res: 'resulta', hint: 'Ipindut ti numero tapno agtawag. Masapul ti signal.', tips: 'Dagiti pakdaar iti kinatalged',
+  w: 'Panawen', now: 'Ita', feels: 'Mariknam', hum: 'Humidity', wind: 'Angin', rain: 'Posibilidad ti tudo', fc: 'Forecast iti sumaruno a 5 nga aldaw',
+  useloc: 'Usaren ti lokasionko', locating: 'Sapsapulen ti lokasionmo…', locno: 'Saan a mabalin ti lokasion. Naipakita ti Batangas City.',
+  wcache: 'Naudi a naisave a forecast', wfail: 'Masapul ti internet iti umuna a gundaway.', raintip: 'Nangato ti posibilidad ti tudo. Mangiyeg iti payong.',
+  mapt: 'Mapa ken direksion', mapn: 'Mailukat ti maps app. Masapul ti internet.', myloc: 'Lukatan ti lokasionko iti Maps', places: 'Dagiti lugar', openmaps: 'Lukatan iti Maps',
+  lang: 'Pagsasao', theme: 'Langa', auto: 'Auto', light: 'Nalawag', dark: 'Nasipnget', size: 'Kadakkel ti teksto', mysaved: 'Dagiti naisave', nosaved: 'Awan pay ti naisave. Ipindut ti bookmark iti aniaman a card.',
+  about: 'Maipapan iti app', install: 'I-install ti app', chk: 'Kitaen ti update', uptodate: 'Napapanahon', done: 'Naupdate ti impormasion', fail: 'Saan a naabot ti server',
+  langnote: 'Naipatarus dagiti menu. Filipino wenno English ti maipakita a pakaammo.',
+  abouttxt: 'Proyekto ti estudyante, saan nga opisial nga app ti gobierno. Naggapu iti opisial a panid ti siudad dagiti pakaammo ket mabalin a mabaliwan. Kumpirmaen iti opisina.',
+  t_news: 'Damag', t_advisory: 'Pakaammo', t_event: 'Aktibidad', t_reminder: 'Pakalagip',
+  wc0: 'Nalawag', wc1: 'Adda ulep', wc2: 'Naulep', wc3: 'Fog', wc4: 'Nalag-an a tudo', wc5: 'Tudo', wc6: 'Panagtudo', wc7: 'Gurruod ken kimat',
+  c_emergency: 'Emerhensia', c_services: 'Serbisio', c_jobs: 'Trabaho', c_fares: 'Pamasahe ken Transportasion', c_health: 'Salun-at', c_programs: 'Programa', c_policies: 'Palisiya ken Karbengan', c_offices: 'Dagiti Opisina ti Gobierno'
+},
+hil: {
+  tagline: 'Imo giya sa syudad, online ukon offline', home: 'Home', info: 'Impormasyon', sos: 'Emerhensya', wx: 'Panahon kag Mapa', menu: 'Menu',
+  gm: 'Maayong aga', ga: 'Maayong hapon', ge: 'Maayong gab-i', search: 'Pangitaa ang serbisyo, trabaho, hotline…',
+  online: 'Online', offline: 'Offline mode', offnote: 'Wala internet. Ginapakita ang gin-save nga impormasyon.', upd: 'Na-update', ready: 'Andam bisan offline',
+  news: 'Mga Pahibalo', all: 'Tanan', seeall: 'Tan-awa tanan', quick: 'Madali nga access', help: 'Kinahanglan sang bulig subong?', imp: 'Importante nga hotline',
+  call: 'Tawag', dir: 'Direksyon', link: 'Buksi ang website', save: 'I-save', saved: 'Naka-save', share: 'Ipaambit', copied: 'Na-kopya ang link',
+  office: 'Opisina', contact: 'Kontak', hours: 'Oras sang opisina', req: 'Mga kinahanglanon', notes: 'Mga detalye', fees: 'Bayranan', src: 'Tinubdan',
+  none: 'Wala sang nakita', res: 'resulta', hint: 'Pinduta ang numero para magtawag. Kinahanglan sang signal ang tawag.', tips: 'Mga tambag sa kasiguruhan',
+  w: 'Panahon', now: 'Subong', feels: 'Pagbati', hum: 'Kaumog', wind: 'Hangin', rain: 'Posibilidad sang ulan', fc: 'Forecast sa sunod nga 5 ka adlaw',
+  useloc: 'Gamita ang akon lokasyon', locating: 'Ginapangita ang imo lokasyon…', locno: 'Naka-off ukon gin-block ang lokasyon. Ginapakita ang Batangas City.',
+  wcache: 'Pinaka-ulihi nga na-save nga forecast', wfail: 'Kinahanglan ang internet sa panahon sa una nga higayon.', raintip: 'Daku ang posibilidad sang ulan. Magdala sang payong.',
+  mapt: 'Mapa kag direksyon', mapn: 'Magabukas ang maps app. Kinahanglan ang internet.', myloc: 'Buksi ang akon lokasyon sa Maps', places: 'Mga lugar', openmaps: 'Buksi sa Maps',
+  lang: 'Pinamulong', theme: 'Hitsura', auto: 'Auto', light: 'Mapawa', dark: 'Madulom', size: 'Kadako sang teksto', mysaved: 'Mga naka-save', nosaved: 'Wala pa sing naka-save. Pinduta ang bookmark sa bisan ano nga card.',
+  about: 'Parte sa app', install: 'I-install ang app', chk: 'Tan-awa ang update', uptodate: 'Updated na', done: 'Na-update ang impormasyon', fail: 'Wala maabot ang server',
+  langnote: 'Gin-hubad ang menu. Filipino ukon English ang ginapakita nga impormasyon.',
+  abouttxt: 'Proyekto sang estudyante, indi opisyal nga app sang gobyerno. Halin sa opisyal nga panid sang syudad ang impormasyon kag mahimo mag-ilis. Kumpirmaha sa opisina.',
+  t_news: 'Balita', t_advisory: 'Pahibalo', t_event: 'Kalihokan', t_reminder: 'Pahanumdom',
+  wc0: 'Mapawa', wc1: 'May panganod', wc2: 'Mapanganod', wc3: 'Fog', wc4: 'Hinay nga ulan', wc5: 'Ulan', wc6: 'Pag-ulan', wc7: 'Dalugdog kag kilat',
+  c_emergency: 'Emerhensya', c_services: 'Serbisyo', c_jobs: 'Trabaho', c_fares: 'Pasahe kag Transportasyon', c_health: 'Panglawas', c_programs: 'Programa', c_policies: 'Palisiya kag Katungod', c_offices: 'Mga Opisina sang Gobyerno'
+}
+};
+
+const ICONS = {
+  alert: '<path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/>',
+  clipboard: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9z"/><path d="M9 12h6M9 16h4"/>',
+  briefcase: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2"/><path d="M3 13h18"/>',
+  bus: '<rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 11h16"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/><path d="M6 18v2M18 18v2"/>',
+  cross: '<rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/>',
+  heart: '<path d="M12 21s-8-4.8-8-11a4.5 4.5 0 018-2.6A4.5 4.5 0 0120 10c0 6.2-8 11-8 11z"/>',
+  scroll: '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 13h7M9 17h7"/>',
+  building: '<path d="M3 10l9-6 9 6"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/>',
+  shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/>',
+  users: '<circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0114 0"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14a5 5 0 015 5"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',
+  navigation: '<path d="M12 3l7 17-7-4-7 4z"/>',
+  cap: '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/>',
+  leaf: '<path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15"/><path d="M5 19c3-5 6-8 10-10"/>',
+  flame: '<path d="M12 3c1 4 5 5 5 10a5 5 0 01-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-9z"/>',
+  cloud: '<path d="M7 19a4 4 0 010-8 5.5 5.5 0 0110.5-1A4.5 4.5 0 0117 19z"/>',
+  cloudsun: '<circle cx="8" cy="8" r="3"/><path d="M8 2v1M2 8h1M3.8 3.8l.7.7M12.2 3.8l-.7.7"/><path d="M7 20a4 4 0 010-8 5.5 5.5 0 0110.5-1A4.5 4.5 0 0117 20z"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/>',
+  rain: '<path d="M7 15a4 4 0 010-8 5.5 5.5 0 0110.5-1A4.5 4.5 0 0117 15z"/><path d="M8 18l-1 3M13 18l-1 3M18 18l-1 3"/>',
+  storm: '<path d="M7 14a4 4 0 010-8 5.5 5.5 0 0110.5-1A4.5 4.5 0 0117 14z"/><path d="M12 14l-2 4h4l-2 4"/>',
+  fog: '<path d="M4 8h16M3 12h18M5 16h14M8 20h8"/>',
+  pin: '<path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+  chev: '<path d="M6 9l6 6 6-6"/>',
+  bookmark: '<path d="M6 3h12v18l-6-4-6 4z"/>',
+  share: '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/>',
+  link: '<path d="M7 17L17 7M9 7h8v8"/>',
+  refresh: '<path d="M20 11a8 8 0 10-2 6"/><path d="M20 4v7h-7"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/>',
+  home: '<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
+  list: '<path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>',
+  menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+  bell: '<path d="M6 16v-5a6 6 0 0112 0v5l2 2H4z"/><path d="M10 21h4"/>',
+  download: '<path d="M12 4v11M7 11l5 5 5-5"/><path d="M5 20h14"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>'
+};
+const ic = (n, c) => '<svg class="i' + (c ? ' ' + c : '') + '" viewBox="0 0 24 24" aria-hidden="true">' + (ICONS[n] || ICONS.info) + '</svg>';
+const CATCOL = { emergency: '#d92d20', services: '#0a6fd1', jobs: '#7c4dff', fares: '#e08a00', health: '#0f9b72', programs: '#d6336c', policies: '#51627a', offices: '#3f51b5' };
+
+// ---------- state ----------
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem('bca:' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem('bca:' + k, JSON.stringify(v)); } catch (e) {} }
+};
+const S = {
+  data: null,
+  lang: LS.get('lang', null),
+  theme: LS.get('theme', 'auto'),
+  size: LS.get('size', 1),
+  saved: LS.get('saved', []),
+  route: 'home', cat: 'all', q: '', open: {},
+  wx: LS.get('wx', null), wxBusy: false, wxMsg: '', loc: null
+};
+if (!S.lang) {
+  const n = (navigator.language || 'en').toLowerCase();
+  S.lang = n.startsWith('en') ? 'en' : (/^(fil|tl)/.test(n) ? 'fil' : (/^(ceb|ilo|hil)/.test(n) ? n.slice(0, 3) : 'fil'));
+}
+const $ = (s, r) => (r || document).querySelector(s);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const T = (k) => (I18N[S.lang] && I18N[S.lang][k]) || I18N.en[k] || k;
+function L(x) { if (x == null) return ''; if (typeof x === 'string') return x; return x[S.lang] || x.fil || x.en || ''; }
+function LL(x) { if (!x) return []; return x[S.lang] || x.fil || x.en || []; }
+function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2600); }
+const tel = (n) => 'tel:' + String(n).replace(/[^\d+]/g, '');
+const dirUrl = (q) => 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(q);
+const fmtDate = (d) => { try { return new Date(d + 'T00:00:00').toLocaleDateString(S.lang === 'en' ? 'en-PH' : 'fil-PH', { year: 'numeric', month: 'short', day: 'numeric' }); } catch (e) { return d; } };
+
+// ---------- rendering helpers ----------
+function matchItem(it) {
+  if (S.cat === 'saved') { if (S.saved.indexOf(it.id) < 0) return false; }
+  else if (S.cat !== 'all' && S.cat !== 'news' && it.cat !== S.cat) return false;
+  if (!S.q) return true;
+  const hay = [JSON.stringify(it.t), JSON.stringify(it.s || ''), it.o || '', (it.c || []).join(' '), it.k || '', JSON.stringify(it.d || ''), JSON.stringify(it.r || '')].join(' ').toLowerCase();
+  return S.q.toLowerCase().split(/\s+/).every((w) => hay.indexOf(w) > -1);
+}
+function actions(it) {
+  let h = '';
+  if (it.c && it.c.length) h += '<a class="btn ' + (it.cat === 'emergency' ? 'd' : 'p') + '" href="' + esc(tel(it.c[0])) + '">' + ic('phone') + T('call') + ' ' + esc(it.c[0]) + '</a>';
+  if (it.m) h += '<a class="btn" target="_blank" rel="noopener" href="' + esc(dirUrl(it.m)) + '">' + ic('navigation') + T('dir') + '</a>';
+  if (it.m2) h += '<a class="btn" target="_blank" rel="noopener" href="' + esc(dirUrl(it.m2)) + '">' + ic('navigation') + 'Batangas Port</a>';
+  if (it.u) h += '<a class="btn" target="_blank" rel="noopener" href="' + esc(it.u) + '">' + ic('link') + T('link') + '</a>';
+  const on = S.saved.indexOf(it.id) > -1;
+  h += '<button class="btn' + (on ? ' on' : '') + '" data-save="' + it.id + '">' + ic('bookmark') + (on ? T('saved') : T('save')) + '</button>';
+  h += '<button class="btn" data-share="' + it.id + '">' + ic('share') + T('share') + '</button>';
+  return '<div class="acts">' + h + '</div>';
+}
+function details(it) {
+  let h = '';
+  if (it.o) h += '<h5>' + T('office') + '</h5><div>' + esc(it.o) + '</div>';
+  if (it.h) h += '<h5>' + T('hours') + '</h5><div>' + esc(L(it.h)) + '</div>';
+  if (it.f) h += '<h5>' + T('fees') + '</h5><div>' + esc(L(it.f)) + '</div>';
+  if (it.r) h += '<h5>' + T('req') + '</h5><ul>' + LL(it.r).map((x) => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+  if (it.d) h += '<h5>' + T('notes') + '</h5><ul>' + LL(it.d).map((x) => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+  if (it.c && it.c.length > 1) h += '<h5>' + T('contact') + '</h5><div>' + it.c.map((n) => '<a href="' + esc(tel(n)) + '">' + esc(n) + '</a>').join(' &middot; ') + '</div>';
+  if (it.src) h += '<div class="srcl">' + T('src') + ': ' + esc(it.src) + '</div>';
+  return h;
+}
+function itemCard(it) {
+  const col = CATCOL[it.cat] || '#0a4f9e';
+  const open = S.open[it.id] ? ' open' : '';
+  const hasDet = it.o || it.h || it.f || it.r || it.d || it.src || (it.c && it.c.length > 1);
+  return '<article class="card it' + open + '" style="--c:' + col + '" id="c-' + it.id + '">' +
+    '<button class="hd" data-open="' + it.id + '" aria-expanded="' + !!S.open[it.id] + '"><span class="ico">' + ic(it.ic || 'info') + '</span>' +
+    '<span><h4>' + esc(L(it.t)) + '</h4><p class="s">' + esc(L(it.s)) + '</p></span>' + (hasDet ? '<span class="chev">' + ic('chev') + '</span>' : '') + '</button>' +
+    actions(it) + (hasDet ? '<div class="det">' + details(it) + '</div>' : '') + '</article>';
+}
+function newsCard(n, wide) {
+  return '<article class="nc"><span class="tag ' + n.type + '">' + T('t_' + n.type) + '</span><span class="date">' + esc(fmtDate(n.date)) + (n.src ? ' &middot; ' + esc(n.src) : '') + '</span>' +
+    '<h4>' + esc(L(n.t)) + '</h4><p' + (wide ? ' style="-webkit-line-clamp:unset"' : '') + '>' + esc(L(n.b)) + '</p>' +
+    (n.url ? '<a class="nlink" target="_blank" rel="noopener" href="' + esc(n.url) + '">' + T('link') + ' &rarr;</a>' : '') + '</article>';
+}
+function catLabel(id) { return T('c_' + id); }
+
+// ---------- weather ----------
+const WGRP = (c) => c <= 1 ? 0 : c === 2 ? 1 : c === 3 ? 2 : (c === 45 || c === 48) ? 3 : (c >= 51 && c <= 57) ? 4 : (c >= 61 && c <= 67) ? 5 : (c >= 80 && c <= 82) ? 6 : c >= 95 ? 7 : 2;
+const WICON = ['sun', 'cloudsun', 'cloud', 'fog', 'rain', 'rain', 'rain', 'storm'];
+function loadWx(lat, lon, label) {
+  S.wxBusy = true; paintWx();
+  const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon +
+    '&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m' +
+    '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FManila&forecast_days=5';
+  const ctl = ('AbortController' in window) ? new AbortController() : null;
+  const to = setTimeout(() => ctl && ctl.abort(), 9000);
+  return fetch(url, ctl ? { signal: ctl.signal } : {}).then((r) => { if (!r.ok) throw new Error('http'); return r.json(); })
+    .then((j) => {
+      S.wx = { t: Date.now(), label: label, cur: j.current, daily: j.daily };
+      LS.set('wx', S.wx); S.wxMsg = '';
+    })
+    .catch(() => { S.wxMsg = S.wx ? 'wcache' : 'wfail'; })
+    .then(() => { clearTimeout(to); S.wxBusy = false; paintWx(); if (S.route === 'home') paintHome(); });
+}
+function useMyLocation() {
+  if (!navigator.geolocation) { S.wxMsg = 'locno'; return loadWx(S.data.meta.city.lat, S.data.meta.city.lon, 'city'); }
+  S.wxMsg = 'locating'; paintWx();
+  navigator.geolocation.getCurrentPosition((p) => {
+    S.loc = { lat: p.coords.latitude, lon: p.coords.longitude };
+    loadWx(S.loc.lat, S.loc.lon, 'me');
+  }, () => { S.wxMsg = 'locno'; loadWx(S.data.meta.city.lat, S.data.meta.city.lon, 'city'); }, { timeout: 9000, maximumAge: 600000 });
+}
+function wxHtml() {
+  const w = S.wx;
+  if (!w) return '<div class="card" style="padding:18px">' + (S.wxBusy ? '…' : esc(T('wfail'))) + '</div>';
+  const c = w.cur, g = WGRP(c.weather_code), rain = w.daily.precipitation_probability_max[0];
+  const where = w.label === 'me' ? T('myloc').replace(/^.*?(Maps|Mapa).*$/, '') : '';
+  let h = '<div class="wnow"><div class="row" style="border:0;padding:0">' + ic(WICON[g]) + '<div><div class="t">' + Math.round(c.temperature_2m) + '°C</div><div>' + esc(T('wc' + g)) + '</div></div></div>' +
+    '<div class="stats"><div><b>' + Math.round(c.apparent_temperature) + '°</b>' + esc(T('feels')) + '</div><div><b>' + Math.round(c.relative_humidity_2m) + '%</b>' + esc(T('hum')) + '</div><div><b>' + Math.round(c.wind_speed_10m) + ' km/h</b>' + esc(T('wind')) + '</div></div></div>';
+  if (rain >= 60) h += '<div class="tip">' + ic('info') + ' ' + esc(T('raintip')) + ' (' + rain + '%)</div>';
+  h += '<h2 class="sec">' + esc(T('fc')) + '</h2><div class="fc">' + w.daily.time.map((d, i) => {
+    let day = d; try { day = new Date(d + 'T00:00:00').toLocaleDateString(S.lang === 'en' ? 'en-PH' : 'fil-PH', { weekday: 'short' }); } catch (e) {}
+    return '<div><span>' + esc(day) + '</span>' + ic(WICON[WGRP(w.daily.weather_code[i])]) + '<b>' + Math.round(w.daily.temperature_2m_max[i]) + '°</b><br><span>' + Math.round(w.daily.temperature_2m_min[i]) + '°</span><br><span>' + (w.daily.precipitation_probability_max[i] || 0) + '%</span></div>';
+  }).join('') + '</div>';
+  const when = new Date(w.t).toLocaleString(S.lang === 'en' ? 'en-PH' : 'fil-PH', { dateStyle: 'medium', timeStyle: 'short' });
+  h += '<p class="note">' + esc(T('upd')) + ': ' + esc(when) + ' &middot; Open-Meteo' + (S.wxMsg === 'wcache' ? ' &middot; ' + esc(T('wcache')) : '') + '</p>';
+  return h;
+}
+function paintWx() { const el = $('#wxbox'); if (el) { el.innerHTML = wxHtml() + (S.wxMsg && S.wxMsg !== 'wcache' && S.wxMsg !== 'wfail' ? '<p class="note">' + esc(T(S.wxMsg)) + '</p>' : ''); } }
+
+// ---------- views ----------
+function topHtml() {
+  const home = S.route === 'home', on = navigator.onLine;
+  const titles = { info: T('info'), sos: T('sos'), wx: T('wx'), menu: T('menu') };
+  const hr = new Date().getHours(), g = hr < 12 ? 'gm' : hr < 18 ? 'ga' : 'ge';
+  return '<div class="top" ' + (S.route === 'info' || home ? '' : 'style="padding-bottom:22px"') + '><div class="bar"><span class="logo">' + ic('pin') + '</span><div><h1>' + esc(S.data.meta.appName) + '<small>' + esc(T('tagline')) + '</small></h1></div><span class="sp"></span>' +
+    '<button class="pill ' + (on ? '' : 'off') + '" data-act="net"><span class="dot"></span>' + esc(on ? T('online') : T('offline')) + '</button>' +
+    '<button class="pill" data-act="lang">' + ic('globe') + S.lang.toUpperCase() + '</button></div>' +
+    (home ? '<div class="hello">' + esc(T(g)) + '!<small>Batangas City</small></div>' : '<div class="hello">' + esc(titles[S.route] || '') + '</div>') + '</div>' +
+    '<div class="offbanner">' + esc(T('offnote')) + '</div>';
+}
+function sbox(id, val) { return '<div class="sbox">' + ic('search') + '<input id="' + id + '" type="search" enterkeyhint="search" autocomplete="off" placeholder="' + esc(T('search')) + '" value="' + esc(val || '') + '"></div>'; }
+function homeBody() {
+  const d = S.data, w = S.wx;
+  let wm = '<button class="wmini" data-go="wx">';
+  if (w) { const g = WGRP(w.cur.weather_code); wm += ic(WICON[g]) + '<div><div class="big">' + Math.round(w.cur.temperature_2m) + '°C</div><div class="sub">' + esc(T('wc' + g)) + ' &middot; ' + esc(T('rain')) + ' ' + (w.daily.precipitation_probability_max[0] || 0) + '%</div></div>'; }
+  else wm += ic('cloudsun') + '<div><div class="big" style="font-size:1.1rem">' + esc(T('w')) + '</div><div class="sub">Batangas City</div></div>';
+  wm += '<span class="sp"></span>' + ic('chev', '') + '</button>';
+  const sos = d.items.filter((i) => i.cat === 'emergency' && i.pri).slice(0, 6).map((i) => '<a class="call" href="' + esc(tel(i.c[0])) + '"><b>' + esc(i.c[0]) + '</b><span>' + esc(L(i.t)) + '</span></a>').join('');
+  const tiles = d.categories.map((c) => ({ go: c.id === 'emergency' ? 'sos' : 'info/' + c.id, ic: c.ic, l: catLabel(c.id), col: CATCOL[c.id] }))
+    .concat([{ go: 'wx', ic: 'cloudsun', l: T('w'), col: '#1d8ae0' }, { go: 'wx/map', ic: 'navigation', l: T('dir'), col: '#0f9b72' }, { go: 'info/news', ic: 'bell', l: T('news'), col: '#e08a00' }, { go: 'info/saved', ic: 'bookmark', l: T('mysaved'), col: '#d6336c' }]);
+  const news = d.announcements.slice().sort((a, b) => b.date < a.date ? -1 : 1).slice(0, 4).map((n) => newsCard(n)).join('');
+  const pop = d.items.filter((i) => i.pri && i.cat !== 'emergency').slice(0, 6).map(itemCard).join('');
+  return '<main id="homebox"><div style="margin-top:6px">' + wm + '</div>' +
+    '<h2 class="sec" style="margin-top:18px"> </h2><div class="sos" style="margin-top:-30px"><h3>' + ic('alert') + esc(T('help')) + '</h3><div class="hs">' + sos + '</div></div>' +
+    '<h2 class="sec">' + esc(T('quick')) + '</h2><div class="grid">' + tiles.map((t) => '<button class="tile" data-go="' + t.go + '" style="--c:' + t.col + '"><i>' + ic(t.ic) + '</i>' + esc(t.l) + '</button>').join('') + '</div>' +
+    '<h2 class="sec">' + ic('bell') + esc(T('news')) + '<button data-go="info/news">' + esc(T('seeall')) + '</button></h2><div class="news">' + news + '</div>' +
+    '<h2 class="sec">' + esc(T('ready')) + '</h2>' + pop + '<p class="foot">' + esc(T('abouttxt')) + '</p></main>';
+}
+function paintHome() { const el = $('#homebox'); if (el) { const m = homeBody(); const t = document.createElement('div'); t.innerHTML = m; el.innerHTML = t.firstChild.innerHTML; } }
+function listHtml() {
+  const d = S.data;
+  if (S.cat === 'news') {
+    const ns = d.announcements.slice().sort((a, b) => b.date < a.date ? -1 : 1).filter((n) => !S.q || JSON.stringify(n).toLowerCase().indexOf(S.q.toLowerCase()) > -1);
+    return '<p class="count">' + ns.length + ' ' + esc(T('res')) + '</p>' + (ns.map((n) => '<div style="margin-bottom:12px" class="nc">' + newsCard(n, true).replace(/^<article class="nc">/, '').replace(/<\/article>$/, '') + '</div>').join('') || '<div class="empty">' + esc(T('none')) + '</div>');
+  }
+  const items = d.items.filter(matchItem);
+  if (S.cat === 'saved' && !S.saved.length) return '<div class="empty">' + esc(T('nosaved')) + '</div>';
+  return '<p class="count">' + items.length + ' ' + esc(T('res')) + '</p>' + (items.map(itemCard).join('') || '<div class="empty">' + esc(T('none')) + '</div>');
+}
+function infoBody() {
+  const d = S.data;
+  const chip = (id, l, icn) => '<button class="chip" data-cat="' + id + '" aria-pressed="' + (S.cat === id) + '">' + (icn ? ic(icn) : '') + esc(l) + '</button>';
+  return sbox('q', S.q) + '<div class="chips">' + chip('all', T('all')) + chip('news', T('news'), 'bell') + chip('saved', T('mysaved'), 'bookmark') + d.categories.map((c) => chip(c.id, catLabel(c.id), c.ic)).join('') + '</div><main id="list">' + listHtml() + '</main>';
+}
+function sosBody() {
+  const d = S.data, its = d.items.filter((i) => i.cat === 'emergency').sort((a, b) => (b.pri || 0) - (a.pri || 0));
+  const tips = d.tips.map((t) => {
+    const k = 'tip_' + t.id, open = S.open[k] ? ' open' : '';
+    return '<article class="card it' + open + '" style="--c:#d92d20"><button class="hd" data-open="' + k + '"><span class="ico">' + ic(t.ic) + '</span><span><h4>' + esc(L(t.t)) + '</h4></span><span class="chev">' + ic('chev') + '</span></button><div class="det"><ul>' + LL(t.d).map((x) => '<li>' + esc(x) + '</li>').join('') + '</ul></div></article>';
+  }).join('');
+  return '<main><p class="note" style="margin-top:0">' + esc(T('hint')) + '</p>' + its.map(itemCard).join('') + '<h2 class="sec">' + ic('shield') + esc(T('tips')) + '</h2>' + tips + '</main>';
+}
+function wxBody() {
+  const places = S.data.items.filter((i) => i.m && i.cat !== 'emergency').slice(0, 14);
+  const links = S.data.meta.links;
+  const myl = S.loc ? 'https://www.google.com/maps/search/?api=1&query=' + S.loc.lat + ',' + S.loc.lon : '';
+  return '<main><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button class="btn p" data-act="loc">' + ic('pin') + esc(T('useloc')) + '</button>' +
+    '<button class="btn" data-act="city">Batangas City</button><a class="btn" target="_blank" rel="noopener" href="' + esc(links.pagasa) + '">PAGASA</a><a class="btn" target="_blank" rel="noopener" href="' + esc(links.phivolcs) + '">PHIVOLCS</a></div>' +
+    '<div id="wxbox">' + wxHtml() + '</div>' +
+    '<h2 class="sec" id="map">' + ic('navigation') + esc(T('mapt')) + '</h2><p class="note" style="margin-top:-4px">' + esc(T('mapn')) + '</p>' +
+    (myl ? '<a class="btn p" target="_blank" rel="noopener" href="' + esc(myl) + '" style="margin-bottom:12px">' + ic('pin') + esc(T('myloc')) + '</a>' : '') +
+    '<h2 class="sec" style="font-size:.9rem;color:var(--muted)">' + esc(T('places')) + '</h2>' +
+    places.map((i) => '<div class="card"><div class="row" style="border:0"><span class="ico" style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--brand2);color:var(--brand)">' + ic(i.ic || 'pin') + '</span><div class="sp"><b style="font-size:.9rem">' + esc(L(i.t)) + '</b></div><a class="btn p" target="_blank" rel="noopener" href="' + esc(dirUrl(i.m)) + '">' + ic('navigation') + esc(T('dir')) + '</a></div></div>').join('') + '</main>';
+}
+function menuBody() {
+  const m = S.data.meta, seg = (items, cur, act) => '<div class="seg">' + items.map((x) => '<button data-act="' + act + '" data-v="' + x[0] + '" aria-pressed="' + (String(cur) === String(x[0])) + '">' + esc(x[1]) + '</button>').join('') + '</div>';
+  return '<main><h2 class="sec" style="margin-top:4px">' + ic('globe') + esc(T('lang')) + '</h2><div class="card">' +
+    LANGS.map((l) => '<button class="row" role="radio" aria-checked="' + (S.lang === l.code) + '" data-setlang="' + l.code + '"><span class="radio"></span><span class="sp">' + esc(l.name) + '</span></button>').join('') + '</div><p class="note">' + esc(T('langnote')) + '</p>' +
+    '<div class="card"><div class="row"><span class="sp">' + esc(T('theme')) + '</span>' + seg([['auto', T('auto')], ['light', T('light')], ['dark', T('dark')]], S.theme, 'theme') + '</div>' +
+    '<div class="row"><span class="sp">' + esc(T('size')) + '</span>' + seg([[0, 'A-'], [1, 'A'], [2, 'A+']], S.size, 'size') + '</div></div>' +
+    '<div class="card"><button class="row" data-go="info/saved">' + ic('bookmark') + '<span class="sp">' + esc(T('mysaved')) + ' (' + S.saved.length + ')</span></button>' +
+    '<button class="row" data-act="update">' + ic('refresh') + '<span class="sp">' + esc(T('chk')) + '<br><small style="color:var(--muted)">' + esc(T('upd')) + ': ' + esc(m.updated) + ' &middot; v' + esc(m.version) + '</small></span></button>' +
+    (deferredPrompt ? '<button class="row" data-act="install">' + ic('download') + '<span class="sp">' + esc(T('install')) + '</span></button>' : '') + '</div>' +
+    '<h2 class="sec">' + ic('info') + esc(T('about')) + '</h2><p class="note">' + esc(T('abouttxt')) + '</p><p class="note">' + esc(m.city.hall) + '<br>' + esc(m.city.phone) + ' &middot; <a href="' + esc(m.city.website) + '" target="_blank" rel="noopener">batangascity.gov.ph</a></p></main>';
+}
+const TABS = [['home', 'home', 'home'], ['info', 'list', 'info'], ['sos', 'alert', 'sos'], ['wx', 'cloudsun', 'wx'], ['menu', 'menu', 'menu']];
+function render() {
+  if (!S.data) { $('#root').innerHTML = '<div class="empty" style="padding-top:30vh">…</div>'; return; }
+  document.documentElement.lang = S.lang;
+  const body = { home: () => sbox('hq') + homeBody(), info: infoBody, sos: sosBody, wx: wxBody, menu: menuBody }[S.route]();
+  $('#root').innerHTML = '<div class="app' + (navigator.onLine ? '' : ' offline') + '">' + topHtml() + body + '</div>' +
+    '<div class="tabs"><nav>' + TABS.map((t) => '<button class="' + (t[0] === 'sos' ? 'sosb' : '') + '" data-go="' + t[0] + '" ' + (S.route === t[0] ? 'aria-current="page"' : '') + '>' + ic(t[1]) + '<span>' + esc(T(t[2])) + '</span></button>').join('') + '</nav></div>';
+  if (S.route === 'wx' && !S.wx && !S.wxBusy) refreshWx();
+}
+// ---------- data sync ----------
+function applyData(d, manual) {
+  const cur = S.data;
+  const changed = !cur || d.meta.version !== cur.meta.version || d.meta.updated !== cur.meta.updated || JSON.stringify(d.items) !== JSON.stringify(cur.items) || JSON.stringify(d.announcements) !== JSON.stringify(cur.announcements);
+  S.data = d; LS.set('data', d);
+  if (changed) { render(); if (cur) toast(T('done')); } else if (manual) toast(T('uptodate'));
+}
+function loadData(manual) {
+  return fetch('data.json?t=' + Date.now(), { cache: 'no-store' }).then((r) => { if (!r.ok) throw new Error('http'); return r.json(); })
+    .then((d) => { if (!d || !Array.isArray(d.items) || !d.meta) throw new Error('bad'); applyData(d, manual); })
+    .catch((e) => { if (manual) toast(T('fail')); if (!S.data) return caches.match('data.json').then((r) => r && r.json()).then((d) => { if (d) { S.data = d; render(); } }).catch(() => {}); });
+}
+function refreshWx() { const c = S.data.meta.city; return S.loc ? loadWx(S.loc.lat, S.loc.lon, 'me') : loadWx(c.lat, c.lon, 'city'); }
+// ---------- routing & events ----------
+function route() {
+  const p = (location.hash || '#/home').replace(/^#\/?/, '').split('/');
+  S.route = ['home', 'info', 'sos', 'wx', 'menu'].indexOf(p[0]) > -1 ? p[0] : 'home';
+  if (S.route === 'info') { S.cat = p[1] || 'all'; } else if (S.route === 'wx') { S.sub = p[1]; }
+  render();
+  if (S.route === 'wx' && S.sub === 'map') { const m = $('#map'); if (m) m.scrollIntoView(); } else window.scrollTo(0, 0);
+}
+const go = (r) => { location.hash = '#/' + r; };
+function applyPrefs() {
+  if (S.theme === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', S.theme);
+  document.documentElement.style.setProperty('--fs', [15, 16.5, 18][S.size] + 'px');
+}
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; if (S.route === 'menu') render(); });
+document.addEventListener('click', (e) => {
+  const t = e.target.closest('[data-go],[data-open],[data-save],[data-share],[data-act],[data-cat],[data-setlang]');
+  if (!t) return;
+  if (t.dataset.go) { go(t.dataset.go); return; }
+  if (t.dataset.cat) { S.cat = t.dataset.cat; history.replaceState(null, '', '#/info/' + S.cat); render(); return; }
+  if (t.dataset.open) { const k = t.dataset.open; S.open[k] = !S.open[k]; const c = t.closest('.card'); c.classList.toggle('open', !!S.open[k]); t.setAttribute('aria-expanded', !!S.open[k]); return; }
+  if (t.dataset.save) { const id = t.dataset.save, i = S.saved.indexOf(id); if (i > -1) S.saved.splice(i, 1); else S.saved.push(id); LS.set('saved', S.saved); const keep = window.scrollY; render(); window.scrollTo(0, keep); return; }
+  if (t.dataset.share) {
+    const it = S.data.items.find((x) => x.id === t.dataset.share), txt = L(it.t) + (it.c ? ' ' + it.c[0] : '');
+    if (navigator.share) navigator.share({ title: L(it.t), text: txt, url: location.href.split('#')[0] }).catch(() => {});
+    else if (navigator.clipboard) navigator.clipboard.writeText(txt + ' ' + location.href.split('#')[0]).then(() => toast(T('copied'))).catch(() => {});
+    return;
+  }
+  if (t.dataset.setlang) { S.lang = t.dataset.setlang; LS.set('lang', S.lang); $('#sheet').classList.remove('show'); render(); return; }
+  const a = t.dataset.act;
+  if (a === 'lang') { openLangSheet(); }
+  else if (a === 'net') { toast(navigator.onLine ? T('online') : T('offnote')); }
+  else if (a === 'loc') { useMyLocation(); }
+  else if (a === 'city') { S.loc = null; S.wxMsg = ''; refreshWx(); }
+  else if (a === 'update') { if (!navigator.onLine) { toast(T('fail')); return; } loadData(true); }
+  else if (a === 'theme') { S.theme = t.dataset.v; LS.set('theme', S.theme); applyPrefs(); render(); }
+  else if (a === 'size') { S.size = +t.dataset.v; LS.set('size', S.size); applyPrefs(); render(); }
+  else if (a === 'install' && deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(() => { deferredPrompt = null; render(); }); }
+});
+document.addEventListener('input', (e) => {
+  if (e.target.id === 'q') { S.q = e.target.value.trim(); const l = $('#list'); if (l) l.innerHTML = listHtml(); }
+});
+document.addEventListener('keydown', (e) => {
+  if (e.target.id === 'hq' && e.key === 'Enter') { S.q = e.target.value.trim(); S.cat = 'all'; go('info'); }
+});
+function openLangSheet() {
+  $('#sheet').innerHTML = '<div class="box"><h3>' + esc(T('lang')) + '</h3>' + LANGS.map((l) => '<button class="row" role="radio" aria-checked="' + (S.lang === l.code) + '" data-setlang="' + l.code + '"><span class="radio"></span><span class="sp">' + esc(l.name) + '</span></button>').join('') + '<p class="note" style="padding:0 20px">' + esc(T('langnote')) + '</p></div>';
+  $('#sheet').classList.add('show');
+}
+document.addEventListener('click', (e) => { if (e.target.id === 'sheet') e.target.classList.remove('show'); });
+function netUI() { const a = $('.app'); if (a) a.classList.toggle('offline', !navigator.onLine); const p = $('[data-act=net]'); if (p) { p.classList.toggle('off', !navigator.onLine); p.lastChild.textContent = navigator.onLine ? T('online') : T('offline'); } }
+window.addEventListener('online', () => { netUI(); loadData(false); if (S.data) refreshWx(); });
+window.addEventListener('offline', netUI);
+window.addEventListener('hashchange', route);
+// ---------- start ----------
+applyPrefs();
+const cached = LS.get('data', null);
+if (cached && cached.meta) S.data = cached;
+route();
+loadData(false).then(() => { if (S.data) { if (!S.wx || Date.now() - S.wx.t > 30 * 60 * 1000) refreshWx(); } });
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+</script></body></html>

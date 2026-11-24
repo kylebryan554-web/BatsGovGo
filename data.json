@@ -1,0 +1,1810 @@
+{
+ "meta": {
+  "appName": "BatsCityAccess",
+  "city": {
+   "name": "Batangas City",
+   "lat": 13.7565,
+   "lon": 121.0583,
+   "hall": "Batangas City Hall Complex, P. Burgos Street, Barangay 17, Batangas City 4200",
+   "phone": "(043) 723-1511",
+   "website": "https://batangascity.gov.ph"
+  },
+  "links": {
+   "pagasa": "https://www.pagasa.dost.gov.ph",
+   "phivolcs": "https://www.phivolcs.dost.gov.ph",
+   "philjobnet": "https://philjobnet.gov.ph",
+   "ltfrb": "https://ltfrb.gov.ph",
+   "news": "https://www.batangascity.gov.ph/web/current-news"
+  },
+  "version": 3,
+  "updated": "2026-11-24"
+ },
+ "categories": [
+  {
+   "id": "emergency",
+   "ic": "alert",
+   "t": {
+    "en": "Emergency",
+    "fil": "Emerhensiya"
+   }
+  },
+  {
+   "id": "services",
+   "ic": "clipboard",
+   "t": {
+    "en": "Services",
+    "fil": "Serbisyo"
+   }
+  },
+  {
+   "id": "jobs",
+   "ic": "briefcase",
+   "t": {
+    "en": "Jobs",
+    "fil": "Trabaho"
+   }
+  },
+  {
+   "id": "fares",
+   "ic": "bus",
+   "t": {
+    "en": "Fares & Transport",
+    "fil": "Pamasahe"
+   }
+  },
+  {
+   "id": "health",
+   "ic": "cross",
+   "t": {
+    "en": "Health Care",
+    "fil": "Kalusugan"
+   }
+  },
+  {
+   "id": "programs",
+   "ic": "heart",
+   "t": {
+    "en": "Programs",
+    "fil": "Programa"
+   }
+  },
+  {
+   "id": "policies",
+   "ic": "scroll",
+   "t": {
+    "en": "Policies & Rights",
+    "fil": "Patakaran at Karapatan"
+   }
+  },
+  {
+   "id": "offices",
+   "ic": "building",
+   "t": {
+    "en": "Government Offices",
+    "fil": "Tanggapan ng Pamahalaan"
+   }
+  }
+ ],
+ "announcements": [
+  {
+   "id": "n1",
+   "date": "2026-11-09",
+   "type": "advisory",
+   "t": {
+    "en": "City strengthens preparations for El Niño and possible flooding",
+    "fil": "Pinalakas ang paghahanda ng lungsod sa El Niño at posibleng pagbaha"
+   },
+   "b": {
+    "en": "Discussed at the city's 4th Quarter Disaster Preparedness Meeting. Check the Emergency tab for hotlines and safety tips.",
+    "fil": "Tinalakay sa 4th Quarter Disaster Preparedness Meeting ng lungsod. Tingnan ang tab na Emerhensiya para sa mga hotline at paalala sa kaligtasan."
+   },
+   "url": "https://www.batangascity.gov.ph/web/current-news/8673-pinalakas-na-paghahanda-ng-batangas-city-sa-el-nino-at-posibleng-pagbaha-tinalakay-sa-4th-quarter-disaster-preparedness-meeting",
+   "src": "batangascity.gov.ph"
+  },
+  {
+   "id": "n2",
+   "date": "2026-11-16",
+   "type": "event",
+   "t": {
+    "en": "Ala E! Festival, December 1 to 8, 2026",
+    "fil": "Ala E! Festival, Disyembre 1 hanggang 8, 2026"
+   },
+   "b": {
+    "en": "Eight-day celebration of the province's 445th founding anniversary in Batangas City. Opening at the People's Quadrangle on Dec 1, fluvial procession of the Santo Niño ng Batangan on Dec 3, street dance on Dec 8.",
+    "fil": "Walong araw na pagdiriwang ng ika-445 anibersaryo ng probinsya sa Lungsod ng Batangas. Pagbubukas sa People's Quadrangle sa Dis 1, prusisyon sa ilog ng Santo Niño ng Batangan sa Dis 3, at street dance sa Dis 8."
+   },
+   "url": "https://tribune.net.ph/2026/11/16/batangas-unveils-eight-day-ala-e-festival-program",
+   "src": "Daily Tribune"
+  },
+  {
+   "id": "n3",
+   "date": "2026-09-27",
+   "type": "advisory",
+   "t": {
+    "en": "New jeepney fares: students, seniors and PWDs keep 20% discount",
+    "fil": "Bagong pamasahe sa dyip: may 20% diskwento pa rin ang estudyante, senior at PWD"
+   },
+   "b": {
+    "en": "Traditional jeepney minimum fare is PHP 14 and modern jeepney PHP 17 (first 4 km), as reported. See Fares & Transport.",
+    "fil": "Ang minimum na pamasahe sa tradisyonal na dyip ay PHP 14 at sa modern na dyip ay PHP 17 (unang 4 km), ayon sa ulat. Tingnan ang Pamasahe."
+   },
+   "url": "https://tribune.net.ph/2026/09/27/ltfrb-drivers-may-collect-fare-hike-without-physical-matrix",
+   "src": "Daily Tribune"
+  },
+  {
+   "id": "n4",
+   "date": "2026-11-09",
+   "type": "news",
+   "t": {
+    "en": "About 350 city employees join drug-free workplace orientation",
+    "fil": "Humigit-kumulang 350 kawani ng pamahalaang lungsod, dumalo sa drug-free workplace orientation"
+   },
+   "b": {
+    "en": "The city government held an orientation on keeping workplaces drug-free.",
+    "fil": "Nagsagawa ang pamahalaang lungsod ng oryentasyon para sa pagpapanatiling ligtas sa droga ang mga opisina."
+   },
+   "url": "https://www.batangascity.gov.ph/web/current-news/8672-350-kawani-ng-pamahalaang-lungsod-ng-batangas-nakiisa-sa-drug-free-workplace-orientation",
+   "src": "batangascity.gov.ph"
+  },
+  {
+   "id": "n5",
+   "date": "2026-11-05",
+   "type": "news",
+   "t": {
+    "en": "UNDAS 2026 in Batangas City reported peaceful",
+    "fil": "Mapayapa at maayos ang UNDAS 2026 sa Batangas City"
+   },
+   "b": {
+    "en": "No untoward incidents were recorded during the All Saints' Day period.",
+    "fil": "Walang naitalang untoward incident sa panahon ng Undas."
+   },
+   "url": "https://www.batangascity.gov.ph/web/current-news/8658-undas-2026-sa-batangas-city-naging-mapayapa-at-maayos-walang-naitalang-untoward-incidents",
+   "src": "batangascity.gov.ph"
+  },
+  {
+   "id": "n6",
+   "date": "2026-11-05",
+   "type": "news",
+   "t": {
+    "en": "City's first watercolor painting competition for senior high students",
+    "fil": "Unang watercolor painting competition ng lungsod para sa mga senior high school"
+   },
+   "b": {
+    "en": "Young Batangueños combined art and statistics in the competition.",
+    "fil": "Pinagsama ng kabataang Batangueño ang sining at estadistika sa patimpalak."
+   },
+   "url": "https://www.batangascity.gov.ph/web/current-news/8657-kabataang-batangueno-pinagtagpo-ang-sining-at-estadistika-sa-watercolor-painting-competition",
+   "src": "batangascity.gov.ph"
+  },
+  {
+   "id": "n7",
+   "date": "2026-01-01",
+   "type": "reminder",
+   "t": {
+    "en": "Business permit renewal: every January 1 to 31",
+    "fil": "Renewal ng business permit: tuwing Enero 1 hanggang 31"
+   },
+   "b": {
+    "en": "Renew within the period to avoid penalties. See Services.",
+    "fil": "Mag-renew sa loob ng panahon para maiwasan ang multa. Tingnan ang Serbisyo."
+   },
+   "url": "https://batangascity.gov.ph/web/setting-up-a-business2",
+   "src": "batangascity.gov.ph"
+  }
+ ],
+ "tips": [
+  {
+   "id": "tp1",
+   "ic": "cloud",
+   "t": {
+    "en": "Typhoon and flood",
+    "fil": "Bagyo at baha"
+   },
+   "d": {
+    "en": [
+     "Charge phones and power banks before the storm.",
+     "Prepare a go-bag: water, food, flashlight, first-aid kit, medicines and copies of IDs.",
+     "Know your evacuation center and follow barangay and CDRRMO announcements.",
+     "Do not walk or drive through floodwater.",
+     "Turn off the main electric switch if water enters the house."
+    ],
+    "fil": [
+     "I-charge ang cellphone at power bank bago dumating ang bagyo.",
+     "Maghanda ng go-bag: tubig, pagkain, flashlight, first-aid kit, gamot at kopya ng mga ID.",
+     "Alamin ang inyong evacuation center at sundin ang abiso ng barangay at CDRRMO.",
+     "Huwag lumusong o magmaneho sa baha.",
+     "Patayin ang main switch ng kuryente kapag pumasok ang tubig sa bahay."
+    ]
+   }
+  },
+  {
+   "id": "tp2",
+   "ic": "alert",
+   "t": {
+    "en": "Earthquake",
+    "fil": "Lindol"
+   },
+   "d": {
+    "en": [
+     "Drop, Cover and Hold On under a sturdy table.",
+     "Stay away from windows, shelves and falling objects.",
+     "If outside, move to an open area away from buildings, posts and wires.",
+     "After the shaking stops, check for injuries, gas leaks and electrical hazards.",
+     "Expect aftershocks and follow official advisories."
+    ],
+    "fil": [
+     "Lumuhod, magtakip at kumapit (Drop, Cover, Hold) sa ilalim ng matibay na mesa.",
+     "Lumayo sa bintana, estante at mga bagay na maaaring mahulog.",
+     "Kung nasa labas, pumunta sa bukas na lugar na malayo sa gusali, poste at kable.",
+     "Kapag tumigil ang pagyanig, tingnan kung may sugatan, tagas ng gas o panganib sa kuryente.",
+     "Maghanda sa aftershock at sundin ang opisyal na abiso."
+    ]
+   }
+  },
+  {
+   "id": "tp3",
+   "ic": "flame",
+   "t": {
+    "en": "Fire",
+    "fil": "Sunog"
+   },
+   "d": {
+    "en": [
+     "Shout \"Fire!\" and call the BFP right away.",
+     "Stay low under the smoke and leave quickly.",
+     "Do not use elevators.",
+     "Never go back inside a burning building.",
+     "If clothes catch fire: stop, drop and roll."
+    ],
+    "fil": [
+     "Sumigaw ng \"Sunog!\" at tumawag agad sa BFP.",
+     "Dumapa o yumuko sa ilalim ng usok at lumabas agad.",
+     "Huwag gumamit ng elevator.",
+     "Huwag bumalik sa loob ng nasusunog na gusali.",
+     "Kung masunog ang damit: huminto, dumapa at gumulong."
+    ]
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "em1",
+   "cat": "emergency",
+   "ic": "cross",
+   "pri": 1,
+   "t": {
+    "en": "24/7 EBD Health Emergency Hotline",
+    "fil": "24/7 EBD Health Emergency Hotline"
+   },
+   "s": {
+    "en": "Round-the-clock city health emergency line.",
+    "fil": "Hotline ng lungsod para sa emerhensiyang medikal, bukas buong araw."
+   },
+   "c": [
+    "0999-222-6626"
+   ],
+   "src": "batangascity.gov.ph",
+   "k": "ambulance medical health"
+  },
+  {
+   "id": "em2",
+   "cat": "emergency",
+   "ic": "alert",
+   "pri": 1,
+   "t": "CDRRMO (Disaster Risk Reduction and Management)",
+   "s": {
+    "en": "Report emergencies and request rescue or disaster assistance.",
+    "fil": "Mag-ulat ng emerhensiya at humingi ng rescue o tulong sa sakuna."
+   },
+   "o": "CDRRMO Operation Center, Brgy. Bolbok",
+   "c": [
+    "702-3902"
+   ],
+   "m": "Batangas City CDRRMO Operation Center Bolbok",
+   "d": {
+    "en": [
+     "The dispatcher does a short initial interview (about 1 to 2 minutes)."
+    ],
+    "fil": [
+     "Magtatanong sandali ang dispatcher (mga 1 hanggang 2 minuto)."
+    ]
+   },
+   "u": "https://batangascity.gov.ph/web/cdrrmoprofile",
+   "src": "batangascity.gov.ph",
+   "k": "disaster rescue flood typhoon earthquake baha bagyo"
+  },
+  {
+   "id": "em3",
+   "cat": "emergency",
+   "ic": "alert",
+   "pri": 1,
+   "t": {
+    "en": "BFP Batangas City (Fire)",
+    "fil": "BFP Batangas City (Bumbero)"
+   },
+   "s": {
+    "en": "Bureau of Fire Protection.",
+    "fil": "Bureau of Fire Protection para sa sunog."
+   },
+   "c": [
+    "(043) 425-7163",
+    "(043) 723-7299",
+    "0915-602-1984"
+   ],
+   "m": "BFP Batangas City Fire Station",
+   "src": "batangascity.gov.ph",
+   "k": "fire sunog bumbero"
+  },
+  {
+   "id": "em4",
+   "cat": "emergency",
+   "ic": "shield",
+   "pri": 1,
+   "t": {
+    "en": "PNP Batangas City (Police)",
+    "fil": "PNP Batangas City (Pulis)"
+   },
+   "s": {
+    "en": "Batangas City Police Station.",
+    "fil": "Himpilan ng Pulisya ng Batangas City."
+   },
+   "c": [
+    "702-1974",
+    "723-2030"
+   ],
+   "m": "Batangas City Police Station",
+   "d": {
+    "en": [
+     "Older pages list 723-2030. Try both if one does not connect."
+    ],
+    "fil": [
+     "Nakalista sa mas lumang pahina ang 723-2030. Subukan ang dalawa kung hindi makontak ang isa."
+    ]
+   },
+   "src": "batangascity.gov.ph",
+   "k": "police pulis crime"
+  },
+  {
+   "id": "em5",
+   "cat": "emergency",
+   "ic": "phone",
+   "pri": 1,
+   "t": {
+    "en": "Mayor's Action Center",
+    "fil": "Mayor's Action Center"
+   },
+   "s": {
+    "en": "Citizen assistance and complaints desk of the city.",
+    "fil": "Tanggapan ng lungsod para sa tulong at reklamo ng mamamayan."
+   },
+   "c": [
+    "786-1920",
+    "(043) 723-1511"
+   ],
+   "m": "Batangas City Hall",
+   "d": {
+    "en": [
+     "Some pages list 723-1511 (City Hall) for this office. Try both if one does not connect."
+    ],
+    "fil": [
+     "May mga pahinang naglilista ng 723-1511 (City Hall). Subukan ang dalawa kung hindi makontak ang isa."
+    ]
+   },
+   "src": "batangascity.gov.ph",
+   "k": "complaint action center mayor reklamo"
+  },
+  {
+   "id": "em6",
+   "cat": "emergency",
+   "ic": "cross",
+   "t": "Batangas Medical Center",
+   "s": {
+    "en": "Regional hospital hotline.",
+    "fil": "Hotline ng ospital."
+   },
+   "c": [
+    "723-0911"
+   ],
+   "m": "Batangas Medical Center",
+   "src": "batangascity.gov.ph",
+   "k": "hospital ospital"
+  },
+  {
+   "id": "em7",
+   "cat": "emergency",
+   "ic": "cross",
+   "t": "Nazareth Hospital",
+   "s": {
+    "en": "Hospital hotline.",
+    "fil": "Hotline ng ospital."
+   },
+   "c": [
+    "723-4144"
+   ],
+   "m": "Jesus of Nazareth Hospital Batangas City",
+   "src": "batangascity.gov.ph",
+   "k": "hospital ospital"
+  },
+  {
+   "id": "em8",
+   "cat": "emergency",
+   "ic": "cross",
+   "t": "Philippine Red Cross, Batangas",
+   "s": {
+    "en": "Red Cross hotline and ambulance.",
+    "fil": "Hotline at ambulansya ng Red Cross."
+   },
+   "c": [
+    "0951-282-0000"
+   ],
+   "d": {
+    "en": [
+     "Older pages list 723-3027 or 0998-851-1107."
+    ],
+    "fil": [
+     "Nakalista sa mas lumang pahina ang 723-3027 o 0998-851-1107."
+    ]
+   },
+   "src": "batangascity.gov.ph",
+   "k": "red cross ambulance"
+  },
+  {
+   "id": "em9",
+   "cat": "emergency",
+   "ic": "users",
+   "t": {
+    "en": "VAWC Hotline",
+    "fil": "VAWC Hotline"
+   },
+   "s": {
+    "en": "Help line for violence against women and children.",
+    "fil": "Hotline para sa karahasan laban sa kababaihan at kabataan."
+   },
+   "c": [
+    "0956-826-7017"
+   ],
+   "src": "batangascity.gov.ph",
+   "k": "women children abuse vawc"
+  },
+  {
+   "id": "em10",
+   "cat": "emergency",
+   "ic": "phone",
+   "pri": 1,
+   "t": {
+    "en": "911 National Emergency Hotline",
+    "fil": "911 Pambansang Hotline sa Emerhensiya"
+   },
+   "s": {
+    "en": "National emergency number for police, fire and medical help.",
+    "fil": "Pambansang numero para sa pulis, bumbero at medikal na tulong."
+   },
+   "c": [
+    "911"
+   ],
+   "src": "National hotline",
+   "k": "emergency 911"
+  },
+  {
+   "id": "em11",
+   "cat": "emergency",
+   "ic": "phone",
+   "t": {
+    "en": "8888 Citizens' Complaint Hotline",
+    "fil": "8888 Hotline para sa Reklamo ng Mamamayan"
+   },
+   "s": {
+    "en": "National hotline for complaints and feedback about government services.",
+    "fil": "Pambansang hotline para sa reklamo at puna sa serbisyo ng gobyerno."
+   },
+   "c": [
+    "8888"
+   ],
+   "src": "National hotline",
+   "k": "complaint reklamo 8888"
+  },
+  {
+   "id": "sv1",
+   "cat": "services",
+   "ic": "clipboard",
+   "pri": 1,
+   "t": {
+    "en": "Business Permit (new and renewal)",
+    "fil": "Business Permit (bago at renewal)"
+   },
+   "s": {
+    "en": "Every business needs a Mayor's/Business Permit before it operates.",
+    "fil": "Kailangan ng bawat negosyo ang Mayor's/Business Permit bago mag-operate."
+   },
+   "o": "Business Permits & Licensing Office (BPLO)",
+   "c": [
+    "722-2252",
+    "403-3447"
+   ],
+   "m": "Batangas City Business Permits and Licensing Office",
+   "h": {
+    "en": "Mon to Fri, 8:00 AM to 5:00 PM",
+    "fil": "Lunes hanggang Biyernes, 8:00 AM hanggang 5:00 PM"
+   },
+   "r": {
+    "en": [
+     "New: Occupancy Permit from the City Engineer's Office",
+     "New: Market Clearance (stall holders)",
+     "All: City Environment Permit to Operate (CEPO) from CENRO",
+     "Renewal: Barangay/Market Clearance and Income Tax Return",
+     "Authorization letter if a representative applies"
+    ],
+    "fil": [
+     "Bago: Occupancy Permit mula sa City Engineer's Office",
+     "Bago: Market Clearance (para sa may pwesto sa palengke)",
+     "Lahat: City Environment Permit to Operate (CEPO) mula sa CENRO",
+     "Renewal: Barangay/Market Clearance at Income Tax Return",
+     "Authorization letter kung kinatawan ang magpoproseso"
+    ]
+   },
+   "d": {
+    "en": [
+     "Renew every January 1 to 31. Penalties apply after the period.",
+     "Steps: (1) filing and assessment, no application form needed anymore; (2) pay at the cashier and claim the permit.",
+     "Barangay clearance is now part of the business permit process."
+    ],
+    "fil": [
+     "Mag-renew tuwing Enero 1 hanggang 31. May multa kapag lumampas.",
+     "Mga hakbang: (1) filing at assessment, wala nang kailangang application form; (2) magbayad sa kahera at kunin ang permit.",
+     "Bahagi na ng proseso ng business permit ang barangay clearance."
+    ]
+   },
+   "f": {
+    "en": "Depends on capitalization, per the Batangas City Revenue Code of 2009.",
+    "fil": "Nakadepende sa puhunan, ayon sa Batangas City Revenue Code of 2009."
+   },
+   "u": "https://batangascity.gov.ph/web/setting-up-a-business2",
+   "src": "batangascity.gov.ph",
+   "k": "business negosyo mayor's permit bplo renewal"
+  },
+  {
+   "id": "sv2",
+   "cat": "services",
+   "ic": "clipboard",
+   "t": {
+    "en": "Referral Letter (scholarship, medical or financial aid, use of facilities)",
+    "fil": "Referral Letter (scholarship, tulong medikal o pinansyal, paggamit ng pasilidad)"
+   },
+   "s": {
+    "en": "Mayor's office referral letter for residents.",
+    "fil": "Referral letter mula sa tanggapan ng Mayor para sa mga residente."
+   },
+   "o": "Office of the Secretary to the Mayor, 2nd floor, City Mayor's Office",
+   "m": "Batangas City Hall",
+   "h": {
+    "en": "Mon to Fri, 8:00 AM to 5:00 PM",
+    "fil": "Lunes hanggang Biyernes, 8:00 AM hanggang 5:00 PM"
+   },
+   "r": {
+    "en": [
+     "Barangay Clearance"
+    ],
+    "fil": [
+     "Barangay Clearance"
+    ]
+   },
+   "u": "https://batangascity.gov.ph/web/citizen-s-charter/46-cmo",
+   "src": "Citizen's Charter",
+   "k": "scholarship assistance medical referral tulong"
+  },
+  {
+   "id": "sv3",
+   "cat": "services",
+   "ic": "clipboard",
+   "t": {
+    "en": "Certificate of Good Moral Character",
+    "fil": "Certificate of Good Moral Character"
+   },
+   "s": {
+    "en": "Certification for bonafide residents.",
+    "fil": "Sertipikasyon para sa mga residente ng lungsod."
+   },
+   "o": "City Mayor's Office, 2nd floor",
+   "m": "Batangas City Hall",
+   "h": {
+    "en": "Mon to Fri, 8:00 AM to 5:00 PM",
+    "fil": "Lunes hanggang Biyernes, 8:00 AM hanggang 5:00 PM"
+   },
+   "r": {
+    "en": [
+     "Barangay Clearance"
+    ],
+    "fil": [
+     "Barangay Clearance"
+    ]
+   },
+   "f": {
+    "en": "Free of charge",
+    "fil": "Libre"
+   },
+   "d": {
+    "en": [
+     "About 10 minutes if the Mayor is in City Hall."
+    ],
+    "fil": [
+     "Mga 10 minuto kung nasa City Hall ang Mayor."
+    ]
+   },
+   "u": "https://batangascity.gov.ph/web/citizen-s-charter/46-cmo",
+   "src": "Citizen's Charter",
+   "k": "good moral certificate"
+  },
+  {
+   "id": "sv4",
+   "cat": "services",
+   "ic": "clipboard",
+   "t": {
+    "en": "Job Recommendation Letter",
+    "fil": "Job Recommendation Letter"
+   },
+   "s": {
+    "en": "Recommendation letter for job applicants who are residents.",
+    "fil": "Rekomendasyon para sa mga naghahanap ng trabaho na residente ng lungsod."
+   },
+   "o": "City Mayor's Office, 2nd floor",
+   "m": "Batangas City Hall",
+   "h": {
+    "en": "Mon to Fri, 8:00 AM to 5:00 PM",
+    "fil": "Lunes hanggang Biyernes, 8:00 AM hanggang 5:00 PM"
+   },
+   "r": {
+    "en": [
+     "Barangay Clearance"
+    ],
+    "fil": [
+     "Barangay Clearance"
+    ]
+   },
+   "f": {
+    "en": "Free of charge",
+    "fil": "Libre"
+   },
+   "u": "https://batangascity.gov.ph/web/citizen-s-charter/46-cmo",
+   "src": "Citizen's Charter",
+   "k": "job recommendation trabaho"
+  },
+  {
+   "id": "sv5",
+   "cat": "services",
+   "ic": "alert",
+   "t": {
+    "en": "Emergency Assistance and Disaster Drills",
+    "fil": "Tulong sa Emerhensiya at Disaster Drill"
+   },
+   "s": {
+    "en": "Call CDRRMO for emergencies, or send a letter to request an orientation or drill.",
+    "fil": "Tumawag sa CDRRMO sa emerhensiya, o magpadala ng sulat para humiling ng orientation o drill."
+   },
+   "o": "CDRRMO Operation Center, Brgy. Bolbok",
+   "c": [
+    "702-3902"
+   ],
+   "m": "Batangas City CDRRMO Operation Center Bolbok",
+   "d": {
+    "en": [
+     "Emergency: call; the initial interview takes 1 to 2 minutes.",
+     "Drills or orientation: submit a request letter to CDRRMO Admin."
+    ],
+    "fil": [
+     "Emerhensiya: tumawag; 1 hanggang 2 minuto ang unang interview.",
+     "Drill o orientation: magsumite ng request letter sa CDRRMO Admin."
+    ]
+   },
+   "u": "https://batangascity.gov.ph/web/citizen-s-charter/47-cdrrmo",
+   "src": "Citizen's Charter",
+   "k": "drill orientation disaster"
+  },
+  {
+   "id": "sv6",
+   "cat": "services",
+   "ic": "clipboard",
+   "t": {
+    "en": "Environment Requests (tree cutting, hauling clearance)",
+    "fil": "Kahilingan sa Kapaligiran (pagputol ng puno, hauling clearance)"
+   },
+   "s": {
+    "en": "Forms for tree cutting or pruning, hauling clearance and environmental certificates.",
+    "fil": "Mga porma para sa pagputol o pagtabas ng puno, hauling clearance at environmental certificate."
+   },
+   "o": "City Environment & Natural Resources Office (CENRO)",
+   "m": "Batangas City Hall",
+   "d": {
+    "en": [
+     "Also handles tipping-fee orders of payment and endorsement letters to DENR for tree cutting."
+    ],
+    "fil": [
+     "Humahawak din ng tipping-fee order of payment at endorsement letter sa DENR para sa pagputol ng puno."
+    ]
+   },
+   "u": "https://batangascity.gov.ph/web/citizen-s-charter/40-cenro",
+   "src": "Citizen's Charter",
+   "k": "tree puno environment hauling"
+  },
+  {
+   "id": "sv7",
+   "cat": "services",
+   "ic": "bus",
+   "t": {
+    "en": "Tricycle and Public Utility Vehicle Permits",
+    "fil": "Permit sa Traysikel at Pampublikong Sasakyan"
+   },
+   "s": {
+    "en": "Mayor's Permit for tricycles, jeepneys and buses.",
+    "fil": "Mayor's Permit para sa traysikel, dyip at bus."
+   },
+   "o": "Transportation Development and Regulatory Office (TDRO)",
+   "c": [
+    "(043) 723-1511"
+   ],
+   "m": "Batangas City Hall",
+   "d": {
+    "en": [
+     "Tricycles need an inspection slip before the Mayor's Permit is issued."
+    ],
+    "fil": [
+     "Kailangan ng inspection slip ang traysikel bago ibigay ang Mayor's Permit."
+    ]
+   },
+   "u": "https://batangascity.gov.ph/web/citizen-s-charter/51-tdro",
+   "src": "Citizen's Charter",
+   "k": "tricycle franchise traysikel jeepney"
+  },
+  {
+   "id": "sv8",
+   "cat": "services",
+   "ic": "scroll",
+   "t": {
+    "en": "Prosecutor's Clearance",
+    "fil": "Prosecutor's Clearance"
+   },
+   "s": {
+    "en": "Clearance from the City Prosecutor's Office.",
+    "fil": "Clearance mula sa Tanggapan ng City Prosecutor."
+   },
+   "o": "Office of the City Prosecutor, Hall of Justice, Pallocan West",
+   "m": "Batangas City Hall of Justice Pallocan West",
+   "f": {
+    "en": "The legal fee depends on the purpose. Confirm the current amount with the office.",
+    "fil": "Nakadepende ang bayad sa layunin. Kumpirmahin ang kasalukuyang halaga sa opisina."
+   },
+   "u": "https://batangascity.gov.ph/web/citizen-s-charter/61-city-prosecutor-s-office",
+   "src": "Citizen's Charter",
+   "k": "clearance prosecutor"
+  },
+  {
+   "id": "sv9",
+   "cat": "services",
+   "ic": "users",
+   "t": {
+    "en": "Senior Citizen ID",
+    "fil": "Senior Citizen ID"
+   },
+   "s": {
+    "en": "IDs for seniors, distributed in barangays so they need not travel far.",
+    "fil": "Ipinamamahagi sa mga barangay ang ID para hindi na lumayo ang mga senior."
+   },
+   "o": "Office of the Senior Citizens Affairs (OSCA)",
+   "c": [
+    "756-0562"
+   ],
+   "m": "Batangas City OSCA",
+   "d": {
+    "en": [
+     "Around 44,000 seniors were covered by the new ID distribution, per a 2024 city report."
+    ],
+    "fil": [
+     "Humigit-kumulang 44,000 senior ang sakop ng bagong pamamahagi ng ID, ayon sa ulat ng lungsod noong 2024."
+    ]
+   },
+   "src": "batangascity.gov.ph",
+   "k": "senior id osca"
+  },
+  {
+   "id": "sv10",
+   "cat": "services",
+   "ic": "scroll",
+   "t": {
+    "en": "Read the Citizen's Charter of any office",
+    "fil": "Basahin ang Citizen's Charter ng anumang tanggapan"
+   },
+   "s": {
+    "en": "Each office lists its requirements, fees, steps and processing time online.",
+    "fil": "Inilalathala ng bawat tanggapan online ang mga requirement, bayad, hakbang at tagal ng proseso."
+   },
+   "u": "https://batangascity.gov.ph",
+   "src": "batangascity.gov.ph",
+   "k": "charter requirements"
+  },
+  {
+   "id": "jb1",
+   "cat": "jobs",
+   "ic": "briefcase",
+   "pri": 1,
+   "t": {
+    "en": "PESO Batangas City: free job help",
+    "fil": "PESO Batangas City: libreng tulong sa trabaho"
+   },
+   "s": {
+    "en": "A non-fee charging employment office. It matches job seekers with vacancies and refers you to other programs.",
+    "fil": "Tanggapang hindi naniningil para sa pagtulong sa paghahanap ng trabaho. Itinutugma ka sa bakanteng posisyon at nire-refer sa iba pang programa."
+   },
+   "o": "Public Employment Service Office (PESO), Batangas City Hall Complex",
+   "c": [
+    "723-8802"
+   ],
+   "m": "Batangas City PESO",
+   "d": {
+    "en": [
+     "Job matching of vacancies and applicants.",
+     "Employment and career counseling.",
+     "Pre-employment orientation for local and overseas workers.",
+     "Employability trainings and referral to livelihood programs.",
+     "Job fairs, and a summer and Christmas vacation employment program for students and out-of-school youth.",
+     "Help for returning overseas workers."
+    ],
+    "fil": [
+     "Pagtutugma ng bakanteng trabaho at aplikante.",
+     "Employment at career counseling.",
+     "Pre-employment orientation para sa lokal at overseas na manggagawa.",
+     "Mga pagsasanay at referral sa programang pangkabuhayan.",
+     "Job fair, at programang pang-trabaho tuwing bakasyon sa tag-init at Pasko para sa mga estudyante at out-of-school youth.",
+     "Tulong para sa mga nagbalik na OFW."
+    ]
+   },
+   "f": {
+    "en": "PESO is non-fee charging.",
+    "fil": "Hindi naniningil ang PESO."
+   },
+   "u": "https://www.batangascity.gov.ph/web/pesoprofile",
+   "src": "batangascity.gov.ph",
+   "k": "job trabaho peso employment"
+  },
+  {
+   "id": "jb2",
+   "cat": "jobs",
+   "ic": "search",
+   "t": {
+    "en": "PhilJobNet: national job portal",
+    "fil": "PhilJobNet: pambansang job portal"
+   },
+   "s": {
+    "en": "The government's online job-matching site run by DOLE. Needs internet.",
+    "fil": "Online job-matching site ng gobyerno na pinapatakbo ng DOLE. Kailangan ng internet."
+   },
+   "u": "https://philjobnet.gov.ph",
+   "src": "DOLE",
+   "k": "jobs online dole"
+  },
+  {
+   "id": "jb3",
+   "cat": "jobs",
+   "ic": "briefcase",
+   "t": {
+    "en": "Jobs in the city government",
+    "fil": "Trabaho sa pamahalaang lungsod"
+   },
+   "s": {
+    "en": "The city website has a Careers section with a PESO job application form.",
+    "fil": "May Careers section ang website ng lungsod na may PESO job application form."
+   },
+   "u": "https://batangascity.gov.ph",
+   "src": "batangascity.gov.ph",
+   "k": "careers government job"
+  },
+  {
+   "id": "jb4",
+   "cat": "jobs",
+   "ic": "clipboard",
+   "t": {
+    "en": "Job application checklist",
+    "fil": "Checklist sa pag-a-apply ng trabaho"
+   },
+   "s": {
+    "en": "Documents employers commonly ask for. Requirements differ by employer.",
+    "fil": "Mga dokumentong karaniwang hinihingi ng employer. Iba-iba ang requirement."
+   },
+   "r": {
+    "en": [
+     "Resume and application letter",
+     "Barangay clearance (free recommendation letter from the Mayor's office needs it, see Services)",
+     "Police or NBI clearance",
+     "PSA birth certificate",
+     "TIN, SSS, PhilHealth and Pag-IBIG numbers",
+     "Medical certificate",
+     "Valid IDs and 2x2 photos"
+    ],
+    "fil": [
+     "Resume at application letter",
+     "Barangay clearance (kailangan din ito sa libreng recommendation letter mula sa opisina ng Mayor, tingnan sa Serbisyo)",
+     "Police o NBI clearance",
+     "PSA birth certificate",
+     "TIN, SSS, PhilHealth at Pag-IBIG number",
+     "Medical certificate",
+     "Valid ID at 2x2 na larawan"
+    ]
+   },
+   "src": "General guide",
+   "k": "requirements resume trabaho"
+  },
+  {
+   "id": "fr1",
+   "cat": "fares",
+   "ic": "bus",
+   "pri": 1,
+   "t": {
+    "en": "Jeepney fares",
+    "fil": "Pamasahe sa dyip"
+   },
+   "s": {
+    "en": "Traditional jeepney PHP 14 and modern jeepney PHP 17 for the first 4 km, as reported.",
+    "fil": "PHP 14 sa tradisyonal na dyip at PHP 17 sa modern na dyip para sa unang 4 km, ayon sa ulat."
+   },
+   "d": {
+    "en": [
+     "Traditional jeepney: PHP 14 minimum, plus PHP 2 for each succeeding km.",
+     "Modern jeepney: PHP 17 minimum, plus PHP 2.30 for each succeeding km.",
+     "Fares were approved by the LTFRB in March 2026 and reported again in September 2026. Operators must post a fare matrix inside the vehicle.",
+     "Confirm the amount for your route with the driver's posted matrix or the LTFRB."
+    ],
+    "fil": [
+     "Tradisyonal na dyip: PHP 14 minimum, dagdag PHP 2 sa bawat susunod na km.",
+     "Modern na dyip: PHP 17 minimum, dagdag PHP 2.30 sa bawat susunod na km.",
+     "Inaprubahan ng LTFRB noong Marso 2026 at inulat muli noong Setyembre 2026. Dapat magpaskil ng fare matrix sa loob ng sasakyan ang operator.",
+     "Kumpirmahin ang pamasahe sa inyong ruta sa nakapaskil na fare matrix ng driver o sa LTFRB."
+    ]
+   },
+   "u": "https://mb.com.ph/2026/03/17/ltfrb-approves-balanced-fare-hikes-for-jeepneys-other-puvs",
+   "src": "Manila Bulletin, Daily Tribune",
+   "k": "jeep jeepney dyip fare pamasahe"
+  },
+  {
+   "id": "fr2",
+   "cat": "fares",
+   "ic": "bus",
+   "t": {
+    "en": "Bus fares",
+    "fil": "Pamasahe sa bus"
+   },
+   "s": {
+    "en": "City ordinary buses PHP 15 and aircon buses PHP 18 for the first 5 km (Metro Manila and city buses).",
+    "fil": "PHP 15 sa ordinaryong city bus at PHP 18 sa aircon bus para sa unang 5 km (Metro Manila at city bus)."
+   },
+   "d": {
+    "en": [
+     "Succeeding km: PHP 2.49 (ordinary) and PHP 2.98 (aircon).",
+     "Provincial ordinary buses went up by PHP 1 for the first 5 km. The resulting fare was not stated in the report.",
+     "Provincial fares depend on the route. Ask the conductor or check the posted matrix."
+    ],
+    "fil": [
+     "Susunod na km: PHP 2.49 (ordinary) at PHP 2.98 (aircon).",
+     "Tumaas ng PHP 1 ang provincial ordinary bus para sa unang 5 km. Hindi binanggit sa ulat ang kabuuang pamasahe.",
+     "Nakadepende sa ruta ang pamasahe sa probinsya. Magtanong sa konduktor o tingnan ang nakapaskil na matrix."
+    ]
+   },
+   "u": "https://mb.com.ph/2026/03/17/ltfrb-approves-balanced-fare-hikes-for-jeepneys-other-puvs",
+   "src": "Manila Bulletin",
+   "k": "bus fare pamasahe"
+  },
+  {
+   "id": "fr3",
+   "cat": "fares",
+   "ic": "users",
+   "pri": 1,
+   "t": {
+    "en": "20% fare discount: students, seniors, PWDs",
+    "fil": "20% diskwento sa pamasahe: estudyante, senior, PWD"
+   },
+   "s": {
+    "en": "Required by law. The discounted traditional jeepney fare is PHP 11.25 for the first 4 km.",
+    "fil": "Ayon sa batas. PHP 11.25 ang may diskwentong pamasahe sa tradisyonal na dyip para sa unang 4 km."
+   },
+   "d": {
+    "en": [
+     "Show a valid student ID, senior citizen ID or PWD ID.",
+     "The LTFRB said the discount cannot be rounded off to a whole peso. Drivers may use the nearest 25 centavos.",
+     "Students get the discount on school days."
+    ],
+    "fil": [
+     "Ipakita ang valid na student ID, senior citizen ID o PWD ID.",
+     "Ayon sa LTFRB, hindi maaaring i-round off sa buong piso ang diskwento. Maaaring gamitin ng driver ang pinakamalapit na 25 sentimo.",
+     "May diskwento ang estudyante tuwing may pasok."
+    ]
+   },
+   "u": "https://tribune.net.ph/2026/09/27/ltfrb-drivers-may-collect-fare-hike-without-physical-matrix",
+   "src": "Daily Tribune",
+   "k": "discount student senior pwd diskwento"
+  },
+  {
+   "id": "fr4",
+   "cat": "fares",
+   "ic": "bus",
+   "t": {
+    "en": "Tricycle fares and franchises",
+    "fil": "Pamasahe at prangkisa ng traysikel"
+   },
+   "s": {
+    "en": "Set by the city, not by the LTFRB. No fare table is published on the city website.",
+    "fil": "Itinatakda ng lungsod, hindi ng LTFRB. Walang nakalathalang talaan ng pamasahe sa website ng lungsod."
+   },
+   "o": "Transportation Development and Regulatory Office (TDRO)",
+   "c": [
+    "(043) 723-1511"
+   ],
+   "m": "Batangas City Hall",
+   "d": {
+    "en": [
+     "Ask the driver for the posted fare or ask TDRO through City Hall.",
+     "Tricycles operate under the Batangas City Tricycle Franchising Ordinance."
+    ],
+    "fil": [
+     "Itanong sa driver ang nakapaskil na pamasahe o magtanong sa TDRO sa pamamagitan ng City Hall.",
+     "Nag-ooperate ang mga traysikel sa ilalim ng Batangas City Tricycle Franchising Ordinance."
+    ]
+   },
+   "src": "batangascity.gov.ph",
+   "k": "tricycle traysikel fare"
+  },
+  {
+   "id": "fr5",
+   "cat": "fares",
+   "ic": "navigation",
+   "t": {
+    "en": "Terminals and port (directions)",
+    "fil": "Terminal at pantalan (direksyon)"
+   },
+   "s": {
+    "en": "Open directions to the Grand Terminal and Batangas Port in your maps app.",
+    "fil": "Buksan ang direksyon papunta sa Grand Terminal at Batangas Port sa maps app."
+   },
+   "d": {
+    "en": [
+     "Fares for buses and ferries change often. Check with the terminal or operator."
+    ],
+    "fil": [
+     "Madalas magbago ang pamasahe sa bus at ferry. Magtanong sa terminal o operator."
+    ]
+   },
+   "m": "Batangas City Grand Terminal",
+   "m2": "Batangas Port",
+   "src": "Maps",
+   "k": "terminal port pier bus ferry"
+  },
+  {
+   "id": "hl1",
+   "cat": "health",
+   "ic": "cross",
+   "pri": 1,
+   "t": {
+    "en": "City Health Office (CHO)",
+    "fil": "City Health Office (CHO)"
+   },
+   "s": {
+    "en": "Main office for city health services and programs.",
+    "fil": "Pangunahing tanggapan para sa serbisyo at programang pangkalusugan ng lungsod."
+   },
+   "o": "City Health Office",
+   "c": [
+    "723-8890"
+   ],
+   "m": "Batangas City Health Office",
+   "src": "batangascity.gov.ph",
+   "k": "health kalusugan cho"
+  },
+  {
+   "id": "hl2",
+   "cat": "health",
+   "ic": "cross",
+   "t": {
+    "en": "Free tooth extraction",
+    "fil": "Libreng bunot ng ngipin"
+   },
+   "s": {
+    "en": "From the CHO Dental Division, with a free consultation and medicine.",
+    "fil": "Mula sa Dental Division ng CHO, may libreng konsultasyon at gamot."
+   },
+   "d": {
+    "en": [
+     "Held at the People's Quadrangle every Friday, limited to 150 beneficiaries, and regularly at barangay health centers.",
+     "For residents of Batangas City.",
+     "Reported in August 2025. Confirm the schedule with the CHO."
+    ],
+    "fil": [
+     "Ginaganap sa People's Quadrangle tuwing Biyernes, limitado sa 150 benepisyaryo, at regular sa mga barangay health center.",
+     "Para sa mga residente ng Batangas City.",
+     "Iniulat noong Agosto 2025. Kumpirmahin ang iskedyul sa CHO."
+    ]
+   },
+   "c": [
+    "723-8890"
+   ],
+   "u": "https://www.batangascity.gov.ph/web/current-news/7361-serbisyong-pangkalusugan-libreng-bunot-ng-ngipin-patuloy-na-ipinagkakaloob-ng-cho",
+   "src": "batangascity.gov.ph",
+   "k": "dental ngipin free libre"
+  },
+  {
+   "id": "hl3",
+   "cat": "health",
+   "ic": "heart",
+   "t": {
+    "en": "EBD Health Card",
+    "fil": "EBD Health Card"
+   },
+   "s": {
+    "en": "City program that helps poor residents with free hospitalization.",
+    "fil": "Programa ng lungsod na tumutulong sa mahihirap na residente para sa libreng pagpapaospital."
+   },
+   "d": {
+    "en": [
+     "Ask the City Health Office or the Mayor's Action Center how to apply."
+    ],
+    "fil": [
+     "Magtanong sa City Health Office o sa Mayor's Action Center kung paano mag-apply."
+    ]
+   },
+   "c": [
+    "723-8890"
+   ],
+   "u": "https://www.batangascity.gov.ph/web/itsd-citizen-charter/20-features/915",
+   "src": "batangascity.gov.ph",
+   "k": "ebd hospital card"
+  },
+  {
+   "id": "hl4",
+   "cat": "health",
+   "ic": "cross",
+   "t": {
+    "en": "Hospitals in Batangas City",
+    "fil": "Mga ospital sa Batangas City"
+   },
+   "s": {
+    "en": "Batangas Medical Center and Nazareth Hospital. Tap for numbers and directions.",
+    "fil": "Batangas Medical Center at Nazareth Hospital. Pindutin para sa numero at direksyon."
+   },
+   "d": {
+    "en": [
+     "Batangas Medical Center: 723-0911",
+     "Nazareth Hospital: 723-4144"
+    ],
+    "fil": [
+     "Batangas Medical Center: 723-0911",
+     "Nazareth Hospital: 723-4144"
+    ]
+   },
+   "c": [
+    "723-0911"
+   ],
+   "m": "Batangas Medical Center",
+   "m2": "Jesus of Nazareth Hospital Batangas City",
+   "src": "batangascity.gov.ph",
+   "k": "hospital ospital"
+  },
+  {
+   "id": "hl5",
+   "cat": "health",
+   "ic": "cross",
+   "t": {
+    "en": "Ligtas Tigdas 2026 (measles)",
+    "fil": "Ligtas Tigdas 2026"
+   },
+   "s": {
+    "en": "A measles protection campaign was reported as started in the city. Ask the CHO about schedules.",
+    "fil": "Iniulat na nagsimula na ang kampanya laban sa tigdas sa lungsod. Magtanong sa CHO tungkol sa iskedyul."
+   },
+   "c": [
+    "723-8890"
+   ],
+   "u": "https://batangascity.gov.ph/web/current-news/8433-ligtas-tigdas-2026-nagsimula-na",
+   "src": "batangascity.gov.ph",
+   "k": "measles tigdas vaccine bakuna"
+  },
+  {
+   "id": "hl6",
+   "cat": "health",
+   "ic": "shield",
+   "t": {
+    "en": "Prevent dengue: the 4S",
+    "fil": "Iwas dengue: ang 4S"
+   },
+   "s": {
+    "en": "Simple steps recommended by the Department of Health.",
+    "fil": "Simpleng hakbang na inirerekomenda ng Department of Health."
+   },
+   "d": {
+    "en": [
+     "Search and destroy mosquito breeding places (stagnant water).",
+     "Self-protection: use repellent and wear long sleeves.",
+     "Seek early consultation for fever lasting 2 days or more.",
+     "Say yes to fogging when advised by the barangay."
+    ],
+    "fil": [
+     "Hanapin at sirain ang mga pinamumugaran ng lamok (naipong tubig).",
+     "Pansariling proteksyon: gumamit ng repellent at magsuot ng mahabang manggas.",
+     "Magpakonsulta agad kung may lagnat na dalawang araw o higit pa.",
+     "Sumang-ayon sa fogging kapag ipinag-utos ng barangay."
+    ]
+   },
+   "src": "DOH general guide",
+   "k": "dengue lamok mosquito"
+  },
+  {
+   "id": "pg1",
+   "cat": "programs",
+   "ic": "cap",
+   "pri": 1,
+   "t": {
+    "en": "EBD Scholarship",
+    "fil": "EBD Scholarship"
+   },
+   "s": {
+    "en": "City scholarship allowances for college students.",
+    "fil": "Allowance ng lungsod para sa mga estudyante sa kolehiyo."
+   },
+   "o": "Mayor's Action Center",
+   "c": [
+    "786-1920"
+   ],
+   "m": "Batangas City Hall",
+   "d": {
+    "en": [
+     "Ask about current slots and requirements. A referral letter may be needed (see Services)."
+    ],
+    "fil": [
+     "Magtanong tungkol sa kasalukuyang slot at requirement. Maaaring kailanganin ang referral letter (tingnan sa Serbisyo)."
+    ]
+   },
+   "src": "batangascity.gov.ph",
+   "k": "scholarship student estudyante"
+  },
+  {
+   "id": "pg2",
+   "cat": "programs",
+   "ic": "leaf",
+   "t": {
+    "en": "Yellow Corn Sufficiency Program",
+    "fil": "Yellow Corn Sufficiency Program"
+   },
+   "s": {
+    "en": "Farmers get subsidized corn seeds and free use of tractors, corn dryers and shredders.",
+    "fil": "May subsidized na binhi ng mais at libreng gamit ng traktora, corn dryer at shredder ang mga magsasaka."
+   },
+   "o": "City Agriculture Office",
+   "src": "batangascity.gov.ph",
+   "k": "farmer magsasaka corn mais agriculture"
+  },
+  {
+   "id": "pg3",
+   "cat": "programs",
+   "ic": "users",
+   "t": {
+    "en": "Sagip Kalinga sa mga Bata",
+    "fil": "Sagip Kalinga sa mga Bata"
+   },
+   "s": {
+    "en": "Program that helps and protects children from risks and abuse.",
+    "fil": "Programang tumutulong at nagpoprotekta sa mga bata laban sa panganib at pang-aabuso."
+   },
+   "o": "CSWDO",
+   "c": [
+    "723-2357"
+   ],
+   "src": "batangascity.gov.ph",
+   "k": "children bata child"
+  },
+  {
+   "id": "pg4",
+   "cat": "programs",
+   "ic": "users",
+   "t": {
+    "en": "Social Pension for Indigent Seniors",
+    "fil": "Social Pension para sa Indigent na Senior"
+   },
+   "s": {
+    "en": "Monthly DSWD stipend for qualified indigent seniors, with the local government.",
+    "fil": "Buwanang tulong ng DSWD para sa kwalipikadong indigent na senior, katuwang ang lokal na pamahalaan."
+   },
+   "o": "OSCA / CSWDO",
+   "c": [
+    "756-0562"
+   ],
+   "d": {
+    "en": [
+     "The amount is set by national law. Confirm the current amount and requirements with OSCA."
+    ],
+    "fil": [
+     "Itinatakda ng batas ang halaga. Kumpirmahin sa OSCA ang kasalukuyang halaga at requirement."
+    ]
+   },
+   "src": "National program",
+   "k": "senior pension"
+  },
+  {
+   "id": "pg5",
+   "cat": "programs",
+   "ic": "users",
+   "t": {
+    "en": "Centenarian benefits",
+    "fil": "Benepisyo ng mga Centenarian"
+   },
+   "s": {
+    "en": "Cash gifts for residents aged 100 and above.",
+    "fil": "Cash gift para sa mga residenteng edad 100 pataas."
+   },
+   "o": "OSCA",
+   "c": [
+    "756-0562"
+   ],
+   "d": {
+    "en": [
+     "Amounts differ by category. Confirm with OSCA."
+    ],
+    "fil": [
+     "Iba-iba ang halaga depende sa kategorya. Kumpirmahin sa OSCA."
+    ]
+   },
+   "u": "https://batangascity.gov.ph/web/current-news/1195",
+   "src": "batangascity.gov.ph",
+   "k": "centenarian senior"
+  },
+  {
+   "id": "pg6",
+   "cat": "programs",
+   "ic": "users",
+   "t": {
+    "en": "PWD ID and Solo Parent ID",
+    "fil": "PWD ID at Solo Parent ID"
+   },
+   "s": {
+    "en": "National laws give benefits and discounts. Ask the city social welfare office how to get the ID.",
+    "fil": "May benepisyo at diskwento ayon sa batas. Magtanong sa tanggapan ng social welfare ng lungsod kung paano kumuha ng ID."
+   },
+   "o": "CSWDO",
+   "c": [
+    "723-2357"
+   ],
+   "m": "Batangas City Social Welfare and Development Office",
+   "src": "National law, confirm locally",
+   "k": "pwd solo parent id"
+  },
+  {
+   "id": "pg7",
+   "cat": "programs",
+   "ic": "alert",
+   "t": {
+    "en": "Disaster preparedness training",
+    "fil": "Pagsasanay sa paghahanda sa sakuna"
+   },
+   "s": {
+    "en": "CDRRMO trains barangays, schools and businesses in rescue, first aid and drills.",
+    "fil": "Sinasanay ng CDRRMO ang mga barangay, paaralan at negosyo sa rescue, first aid at drill."
+   },
+   "o": "CDRRMO",
+   "c": [
+    "702-3902"
+   ],
+   "src": "batangascity.gov.ph",
+   "k": "drill training disaster"
+  },
+  {
+   "id": "pl1",
+   "cat": "policies",
+   "ic": "scroll",
+   "pri": 1,
+   "t": {
+    "en": "Citizen's Charter and processing times (RA 11032)",
+    "fil": "Citizen's Charter at tagal ng proseso (RA 11032)"
+   },
+   "s": {
+    "en": "Every office must publish its requirements, steps, fees, person responsible and maximum processing time.",
+    "fil": "Dapat ilathala ng bawat tanggapan ang requirement, hakbang, bayad, responsableng tao at pinakamahabang tagal ng proseso."
+   },
+   "d": {
+    "en": [
+     "Maximum processing time: 3 working days for simple transactions, 7 for complex and 20 for highly technical ones.",
+     "The charter must be posted at the office entrance and on its website.",
+     "You may file a complaint if an office breaks its own charter. Call 8888 or the Mayor's Action Center."
+    ],
+    "fil": [
+     "Pinakamahabang proseso: 3 araw ng trabaho para sa simple, 7 sa kumplikado at 20 sa lubhang teknikal.",
+     "Dapat nakapaskil ang charter sa pasukan ng opisina at sa website nito.",
+     "Maaari kang magreklamo kung hindi sinusunod ng opisina ang sarili nitong charter. Tumawag sa 8888 o sa Mayor's Action Center."
+    ]
+   },
+   "u": "https://www.philhealth.gov.ph/arta/eodb/EODB_BrieferRA11032.pdf",
+   "src": "RA 11032 briefer",
+   "k": "charter ease of doing business red tape"
+  },
+  {
+   "id": "pl2",
+   "cat": "policies",
+   "ic": "scroll",
+   "t": {
+    "en": "Batangas City Revenue Code of 2009",
+    "fil": "Batangas City Revenue Code of 2009"
+   },
+   "s": {
+    "en": "Sets business registration rules, permit fees and renewal periods.",
+    "fil": "Nagtatakda ng patakaran sa pagpaparehistro ng negosyo, bayad sa permit at panahon ng renewal."
+   },
+   "d": {
+    "en": [
+     "Business permit renewal: January 1 to 31 each year.",
+     "Chapter VI covers permit fees."
+    ],
+    "fil": [
+     "Renewal ng business permit: Enero 1 hanggang 31 taon-taon.",
+     "Saklaw ng Chapter VI ang bayad sa permit."
+    ]
+   },
+   "u": "https://batangascity.gov.ph/web/bploprofile",
+   "src": "batangascity.gov.ph",
+   "k": "tax fees ordinance revenue code"
+  },
+  {
+   "id": "pl3",
+   "cat": "policies",
+   "ic": "scroll",
+   "t": {
+    "en": "City ordinances and resolutions",
+    "fil": "Mga ordinansa at resolusyon ng lungsod"
+   },
+   "s": {
+    "en": "The Sangguniang Panlungsod publishes its ordinances and resolutions online.",
+    "fil": "Inilalathala online ng Sangguniang Panlungsod ang mga ordinansa at resolusyon nito."
+   },
+   "d": {
+    "en": [
+     "The app does not copy full texts. Open the city website when you are online."
+    ],
+    "fil": [
+     "Hindi kinokopya ng app ang buong teksto. Buksan ang website ng lungsod kapag may internet."
+    ]
+   },
+   "u": "https://batangascity.gov.ph",
+   "src": "batangascity.gov.ph",
+   "k": "ordinance resolution council ordinansa"
+  },
+  {
+   "id": "pl4",
+   "cat": "policies",
+   "ic": "users",
+   "pri": 1,
+   "t": {
+    "en": "Senior and PWD discounts",
+    "fil": "Diskwento ng senior at PWD"
+   },
+   "s": {
+    "en": "Seniors and persons with disabilities get a 20% discount and VAT exemption on many goods and services.",
+    "fil": "May 20% diskwento at exempt sa VAT ang senior at PWD sa maraming produkto at serbisyo."
+   },
+   "d": {
+    "en": [
+     "Examples: medicines, restaurants, transport and fares.",
+     "Present your valid senior citizen ID or PWD ID.",
+     "Laws: RA 9994 (seniors) and RA 10754 (PWDs)."
+    ],
+    "fil": [
+     "Halimbawa: gamot, kainan, transportasyon at pamasahe.",
+     "Ipakita ang valid na senior citizen ID o PWD ID.",
+     "Mga batas: RA 9994 (senior) at RA 10754 (PWD)."
+    ]
+   },
+   "src": "National law",
+   "k": "senior pwd discount diskwento"
+  },
+  {
+   "id": "pl5",
+   "cat": "policies",
+   "ic": "users",
+   "t": {
+    "en": "Student fare discount",
+    "fil": "Diskwento sa pamasahe ng estudyante"
+   },
+   "s": {
+    "en": "Students get a 20% discount on public transport fares (RA 11314).",
+    "fil": "May 20% diskwento sa pamasahe sa pampublikong sasakyan ang estudyante (RA 11314)."
+   },
+   "src": "National law",
+   "k": "student estudyante discount"
+  },
+  {
+   "id": "pl6",
+   "cat": "policies",
+   "ic": "scroll",
+   "t": {
+    "en": "Right to information (Freedom of Information)",
+    "fil": "Karapatan sa impormasyon (FOI)"
+   },
+   "s": {
+    "en": "Executive Order No. 2 (2016) lets you request public records from executive-branch agencies.",
+    "fil": "Pinapayagan ka ng Executive Order No. 2 (2016) na humiling ng public record mula sa mga ahensya ng executive branch."
+   },
+   "d": {
+    "en": [
+     "Agencies normally reply within 15 working days.",
+     "Local governments are encouraged, not required, to follow it."
+    ],
+    "fil": [
+     "Karaniwang sumasagot ang ahensya sa loob ng 15 araw ng trabaho.",
+     "Hinihikayat, ngunit hindi obligado, ang mga lokal na pamahalaan na sumunod."
+    ]
+   },
+   "u": "https://www.foi.gov.ph",
+   "src": "EO 2, s. 2016",
+   "k": "foi information request"
+  },
+  {
+   "id": "pl7",
+   "cat": "policies",
+   "ic": "shield",
+   "t": {
+    "en": "Data Privacy Act (RA 10173)",
+    "fil": "Data Privacy Act (RA 10173)"
+   },
+   "s": {
+    "en": "Protects your personal information. This app collects none.",
+    "fil": "Pinoprotektahan ang iyong personal na impormasyon. Wala itong kinokolekta ang app na ito."
+   },
+   "src": "National law",
+   "k": "privacy data"
+  },
+  {
+   "id": "of1",
+   "cat": "offices",
+   "ic": "building",
+   "pri": 1,
+   "t": {
+    "en": "Batangas City Hall",
+    "fil": "Batangas City Hall"
+   },
+   "s": {
+    "en": "P. Burgos Street, Barangay 17, Batangas City 4200.",
+    "fil": "P. Burgos Street, Barangay 17, Batangas City 4200."
+   },
+   "c": [
+    "(043) 723-1511"
+   ],
+   "d": {
+    "en": [
+     "Fax: (043) 723-1558"
+    ],
+    "fil": [
+     "Fax: (043) 723-1558"
+    ]
+   },
+   "m": "Batangas City Hall",
+   "u": "https://batangascity.gov.ph",
+   "src": "batangascity.gov.ph",
+   "k": "city hall mayor munisipyo"
+  },
+  {
+   "id": "of2",
+   "cat": "offices",
+   "ic": "building",
+   "t": {
+    "en": "Business Permits & Licensing Office (BPLO)",
+    "fil": "Business Permits & Licensing Office (BPLO)"
+   },
+   "s": {
+    "en": "Issues business permits.",
+    "fil": "Nag-iisyu ng business permit."
+   },
+   "c": [
+    "722-2252",
+    "403-3447"
+   ],
+   "d": {
+    "en": [
+     "Business One-Stop Shop (BOSS) at Baymall: 403-3447."
+    ],
+    "fil": [
+     "Business One-Stop Shop (BOSS) sa Baymall: 403-3447."
+    ]
+   },
+   "m": "Batangas City Business Permits and Licensing Office",
+   "src": "city directory",
+   "k": "business permit negosyo"
+  },
+  {
+   "id": "of3",
+   "cat": "offices",
+   "ic": "building",
+   "t": "City Treasurer's Office (CTO)",
+   "s": {
+    "en": "Tax and fee payments.",
+    "fil": "Bayad ng buwis at singil."
+   },
+   "c": [
+    "756-6042"
+   ],
+   "m": "Batangas City Treasurer's Office",
+   "src": "city directory",
+   "k": "tax payment buwis"
+  },
+  {
+   "id": "of4",
+   "cat": "offices",
+   "ic": "building",
+   "t": "Public Employment Service Office (PESO)",
+   "s": {
+    "en": "Job matching and employment help.",
+    "fil": "Tulong sa paghahanap ng trabaho."
+   },
+   "c": [
+    "723-8802"
+   ],
+   "m": "Batangas City PESO",
+   "src": "city directory",
+   "k": "job trabaho employment"
+  },
+  {
+   "id": "of5",
+   "cat": "offices",
+   "ic": "building",
+   "t": "City Health Office (CHO)",
+   "s": {
+    "en": "City health services and programs.",
+    "fil": "Serbisyo at programang pangkalusugan ng lungsod."
+   },
+   "c": [
+    "723-8890"
+   ],
+   "m": "Batangas City Health Office",
+   "src": "batangascity.gov.ph",
+   "k": "health kalusugan"
+  },
+  {
+   "id": "of6",
+   "cat": "offices",
+   "ic": "building",
+   "t": "City Social Welfare and Development Office (CSWDO)",
+   "s": {
+    "en": "Social welfare assistance.",
+    "fil": "Tulong panlipunan."
+   },
+   "c": [
+    "723-2357",
+    "723-2208"
+   ],
+   "m": "Batangas City Social Welfare and Development Office",
+   "src": "batangascity.gov.ph",
+   "k": "welfare dswd solo parent"
+  },
+  {
+   "id": "of7",
+   "cat": "offices",
+   "ic": "building",
+   "t": "Office of the Senior Citizens Affairs (OSCA)",
+   "s": {
+    "en": "Senior citizen programs and IDs.",
+    "fil": "Programa at ID para sa senior citizen."
+   },
+   "c": [
+    "756-0562"
+   ],
+   "m": "Batangas City OSCA",
+   "src": "city directory",
+   "k": "senior"
+  },
+  {
+   "id": "of8",
+   "cat": "offices",
+   "ic": "building",
+   "t": "Public Information Office (PIO)",
+   "s": {
+    "en": "City news and public information.",
+    "fil": "Balita at impormasyon ng lungsod."
+   },
+   "c": [
+    "(043) 723-3629"
+   ],
+   "src": "batangascity.gov.ph",
+   "k": "news balita"
+  },
+  {
+   "id": "of9",
+   "cat": "offices",
+   "ic": "building",
+   "t": "Local Economic and Investment Promotion Office (LEDIPO)",
+   "s": {
+    "en": "Economic development and investment promotion.",
+    "fil": "Pagpapaunlad ng ekonomiya at pamumuhunan."
+   },
+   "c": [
+    "702-2330"
+   ],
+   "src": "city directory",
+   "k": "investment economy"
+  },
+  {
+   "id": "of10",
+   "cat": "offices",
+   "ic": "building",
+   "t": "Information Technology Services Division (ITSD)",
+   "s": {
+    "en": "City IT services.",
+    "fil": "Serbisyong IT ng lungsod."
+   },
+   "c": [
+    "402-3403",
+    "403-2768"
+   ],
+   "src": "city directory",
+   "k": "it website"
+  },
+  {
+   "id": "of11",
+   "cat": "offices",
+   "ic": "building",
+   "t": "Transportation Development and Regulatory Office (TDRO)",
+   "s": {
+    "en": "Regulates public land transport, tricycles and traffic.",
+    "fil": "Nangangasiwa sa pampublikong sasakyan, traysikel at trapiko."
+   },
+   "c": [
+    "(043) 723-1511"
+   ],
+   "d": {
+    "en": [
+     "No separate TDRO number is listed on the city website. Call City Hall."
+    ],
+    "fil": [
+     "Walang hiwalay na numero ng TDRO sa website ng lungsod. Tumawag sa City Hall."
+    ]
+   },
+   "m": "Batangas City Hall",
+   "src": "batangascity.gov.ph",
+   "k": "tricycle franchise traysikel"
+  },
+  {
+   "id": "of12",
+   "cat": "offices",
+   "ic": "building",
+   "t": "City Environment and Natural Resources Office (CENRO)",
+   "s": {
+    "en": "Environment permits, tree cutting and hauling clearances.",
+    "fil": "Permit sa kapaligiran, pagputol ng puno at hauling clearance."
+   },
+   "src": "batangascity.gov.ph",
+   "k": "environment tree puno garbage"
+  },
+  {
+   "id": "of13",
+   "cat": "offices",
+   "ic": "building",
+   "t": "Other offices and agencies",
+   "s": {
+    "en": "Phone numbers of other offices in the city.",
+    "fil": "Mga numero ng iba pang tanggapan sa lungsod."
+   },
+   "d": {
+    "en": [
+     "Association of Barangay Captains: 723-4278",
+     "Commission on Audit: 723-3007",
+     "BCCC: 702-2745",
+     "Sports Coliseum: 722-2108",
+     "DILG: 722-2401",
+     "Post Office: 723-2075",
+     "Transport Coordinating Council: 723-6780 / 702-1183",
+     "LTO: 740-9738"
+    ],
+    "fil": [
+     "Association of Barangay Captains: 723-4278",
+     "Commission on Audit: 723-3007",
+     "BCCC: 702-2745",
+     "Sports Coliseum: 722-2108",
+     "DILG: 722-2401",
+     "Post Office: 723-2075",
+     "Transport Coordinating Council: 723-6780 / 702-1183",
+     "LTO: 740-9738"
+    ]
+   },
+   "src": "city directory",
+   "k": "lto dilg post office coa abc"
+  }
+ ]
+}
